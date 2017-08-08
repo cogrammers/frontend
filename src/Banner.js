@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Line from './Line';
 
 class Banner extends Component {
   constructor(props) {
@@ -8,25 +9,21 @@ class Banner extends Component {
       index: 0,
     };
 
-    this.intervalID = null;
+    this.timeoutID = null;
+    this.onLineRendered = this.onLineRendered.bind(this);
   }
 
   componentWillReceiveProps() {
     this.setState({ index: 0 });
   }
 
-  componentDidMount() {
-    this.ensureInterval();
-  }
-
   componentWillUnmount() {
-    clearInterval(this.intervalID);
-    this.intervalID = null;
+    this.destroyTimeout();
   }
 
   ensureInterval() {
     if (!this.intervalID) {
-      const updateIndex = () => this.setState((prevState, props) => {
+      const intervalCallback = () => this.setState((prevState, props) => {
         let index = prevState.index + 1;
         if (index >= props.lines.length) {
           index = 0;
@@ -34,8 +31,25 @@ class Banner extends Component {
         return { index };
       });
 
-      this.intervalID = setInterval(updateIndex, this.props.interval);
+      this.intervalID = setInterval(intervalCallback, this.props.delay);
     }
+  }
+
+  onLineRendered() {
+    this.timeoutID = setTimeout(() => {
+      this.setState((prevState, props) => {
+        let index = prevState.index + 1;
+        if (index >= props.lines.length) {
+          index = 0;
+        }
+        return { index };
+      });
+    }, this.props.delay);
+  }
+
+  destroyTimeout() {
+    clearTimeout(this.timeoutID);
+    this.timeoutID = null;
   }
 
   render() {
@@ -43,19 +57,26 @@ class Banner extends Component {
       return (<div></div>);
     }
 
-    const line = this.props.lines[this.state.index];
-    return (<div>{line}</div>
+    const text = this.props.lines[this.state.index];
+    return (
+      <div>
+        <Line text={text}
+          delay={this.props.typingSpeed}
+          onRendered={this.onLineRendered}/>
+      </div>
     );
   }
 }
 
 Banner.propTypes = {
-  interval: PropTypes.number,
+  delay: PropTypes.number,
+  typingSpeed: PropTypes.number,
   lines: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 Banner.defaultProps = {
-  interval: 1000,
+  typingSpeed: 100,
+  delay: 1000,
 };
 
 export default Banner;
