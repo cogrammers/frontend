@@ -40,6 +40,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               aws s3 sync build s3://cogrammers.community --delete
+              aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"EXM4D7N8TGQBQ\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
             else
               echo "Not master branch so not deploying"
             fi
