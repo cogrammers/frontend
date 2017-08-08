@@ -1,4 +1,7 @@
 .app-header {
   text-align: center;
-  font-size: 130px;
+  font-size: 13vw;
+}
+.content {
+  margin-top: 20vh;
 }
