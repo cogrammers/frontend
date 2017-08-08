@@ -75,7 +75,7 @@ Banner.propTypes = {
 };
 
 Banner.defaultProps = {
-  typingSpeed: 100,
+  typingSpeed: 150,
   delay: 1000,
 };
 
