@@ -21,20 +21,6 @@ class Banner extends Component {
     this.destroyTimeout();
   }
 
-  ensureInterval() {
-    if (!this.intervalID) {
-      const intervalCallback = () => this.setState((prevState, props) => {
-        let index = prevState.index + 1;
-        if (index >= props.lines.length) {
-          index = 0;
-        }
-        return { index };
-      });
-
-      this.intervalID = setInterval(intervalCallback, this.props.delay);
-    }
-  }
-
   onLineRendered() {
     this.timeoutID = setTimeout(() => {
       this.setState((prevState, props) => {

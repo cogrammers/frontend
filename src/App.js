@@ -9,6 +9,7 @@ const lines = [
   'make meaningful things',
   'is open source',
   'is not a bootcamp',
+  'is under construction...',
 ];
 
 class App extends Component {
