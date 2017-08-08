@@ -25,7 +25,9 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-      - run: sudo apt-get update && sudo apt-get install -y awscli
+      - run: sudo apt-get update && sudo apt-get install -y python3 python3-pip
+      - run: echo 'export PATH=$PATH:$HOME/.local/bin' >> $BASH_ENV
+      - run: pip3 install --upgrade --user awscli
 
       - save_cache:
           paths:
@@ -40,7 +42,9 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               aws s3 sync build s3://cogrammers.community --delete
-              aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"EXM4D7N8TGQBQ\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
+              aws configure set preview.cloudfront true
+              aws cloudfront create-invalidation --distribution-id EXM4D7N8TGQBQ --paths '/*'
+
             else
               echo "Not master branch so not deploying"
             fi
