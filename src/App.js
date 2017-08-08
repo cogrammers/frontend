@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import Banner from './Banner';
+
+const lines = [
+  'are awesome',
+  'is not a bootcamp',
+];
 
 class App extends Component {
   render() {
@@ -8,6 +14,7 @@ class App extends Component {
         <div className="app-header">
           Cogrammers ...
         </div>
+        <Banner lines={lines}/>
       </div>
     );
   }
