@@ -4,6 +4,10 @@ import Banner from './Banner';
 
 const lines = [
   'are awesome',
+  'cooperate with each other',
+  'is a place of learning',
+  'make meaningful things',
+  'is open source',
   'is not a bootcamp',
 ];
 
