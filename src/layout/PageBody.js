@@ -4,7 +4,10 @@ import '../App.css';
 
 class PageBody extends Component {
   render() {
-    return ()
+    return (
+      <div className="body-container">
+      </div>
+    );
   }
 }
 
