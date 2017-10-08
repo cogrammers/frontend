@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Nav from 'react-bootstrap/lib/Nav';
+import Navbar from 'react-bootstrap/lib/Navbar';
+import '../App.css';
 import NavBarItem from './NavBarItem';
 
 class NavBar extends Component {
@@ -19,9 +22,16 @@ class NavBar extends Component {
     <NavBarItem text={link.text} url={link.url} />,
   );
     return (
-      <nav className="nav-main">
-        {links}
-      </nav>
+      <Navbar>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="/">Cogrammers</a>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Nav>
+          {links}
+        </Nav>
+      </Navbar>
     )
   }
 }
