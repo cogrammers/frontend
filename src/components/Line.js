@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Line.css';
+import './../Line.css';
 
 class Line extends Component {
   constructor(props) {

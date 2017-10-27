@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Banner from './Banner';
+import Banner from './components/Banner';
 
 const lines = [
   'are awesome',
