@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Banner from './components/Banner';
+import Content from './components/Content';
 
 const lines = [
   'are awesome',
@@ -20,6 +21,7 @@ class App extends Component {
           Cogrammers ...
         </div>
         <Banner lines={lines}/>
+        <Content />
       </div>
     );
   }
