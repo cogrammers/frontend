@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 
 class Content extends Component {
   render() {
-    return (<div><h1>Hello world!</h1></div>);
+    const title = this.props.message[0];
+    const content1 = this.props.message[1];
+    return (
+      <div>
+        <h1>{ title } </h1>
+        <p><strong> { content1 } </strong></p>
+      </div>
+    );
   }
 }
 

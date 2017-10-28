@@ -15,13 +15,17 @@ const lines = [
 
 class App extends Component {
   render() {
+    const mission = [
+      "Welcome to cogrammers!",
+      "Our mission is to foster a community based around the simple idea that a tech education should be accessible, ongoing, and engaging. We are based around the following pillars:"
+    ]
     return (
       <div>
         <div className="app-header">
           Cogrammers ...
         </div>
         <Banner lines={lines}/>
-        <Content />
+        <Content message={mission} />
       </div>
     );
   }
