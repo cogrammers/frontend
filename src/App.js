@@ -13,7 +13,7 @@ class App extends Component {
   }
   render() {
     let innerContent;
-    if (this.state.page === 'mission') {
+    if (this.state.currentPage === 'mission') {
       innerContent = <Mission />;
     }
     else {
