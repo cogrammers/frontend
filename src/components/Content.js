@@ -5,7 +5,7 @@ class Content extends Component {
   render() {
     return (
       <div>
-        <Mission/>
+        { this.props.children }
       </div>
     );
   }
