@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import './App.css';
 import Banner from './components/Banner';
 import Content from './components/Content';
+import Mission from './components/Mission';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      currentPage: 'mission'
+    }
+  }
   render() {
     let innerContent;
-    if (this.state.page === 'home') {
+    if (this.state.page === 'mission') {
       innerContent = <Mission />;
     }
     else {
@@ -17,7 +24,6 @@ class App extends Component {
         <div className="app-header">
           Cogrammers ...
         </div>
-        <Banner lines={lines}/>
         <Content>
           {innerContent}
         </Content>
