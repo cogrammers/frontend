@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Mission from './Mission';
 
 class Content extends Component {
   render() {
@@ -6,8 +7,7 @@ class Content extends Component {
     const content1 = this.props.message[1];
     return (
       <div>
-        <h1>{ title } </h1>
-        <p><strong> { content1 } </strong></p>
+        <Mission/>
       </div>
     );
   }
