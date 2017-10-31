@@ -24,7 +24,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install
       - run: sudo apt-get update && sudo apt-get install -y python3 python3-pip
       - run: echo 'export PATH=$PATH:$HOME/.local/bin' >> $BASH_ENV
       - run: pip3 install --upgrade --user awscli
@@ -35,7 +35,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: npm test
       - run: npm run build
       - deploy:
           name: Deploy to S3 if tests pass and branch is Master
