@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-class Mission extends Component{
+const aboutContent
+
+class About extends Component{
   render(){
     return(
-      <div id="mission">
-        <h1>Welcome to cogrammers!</h1>
+      <div id="about">
         <p><strong>Our mission is to foster a community based around the simple idea that a tech education should be accessible, ongoing, and engaging. We are based around the following pillars:</strong></p>
         <h2>Open source</h2>
         <p>Information is power, and information should be free. Cogrammers is radically transparent. Everything from the curriculum, the discussions, exams, company direction, and business plans should be transparent by default. Current students should feel just as encouraged to change the curriculum as staff or anyone else.</p>
@@ -20,4 +21,4 @@ class Mission extends Component{
 
 }
 
-export default Mission;
+export default About;

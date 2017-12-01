@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import Grid from 'react-css-grid';
 import './App.css';
 // import Content from './components/Content';
-// import Mission from './components/Mission';
-// import Content from './data/content';
+import LandingPage from './components/LandingPage';
 
 const content = {
   "header": "Welcome to Cogrammers!",
-  "mission": "blahhhhh",
   "about": {
     "oss": "dgyduf",
     "community": "djhgfsdkfj",
@@ -33,7 +31,7 @@ class App extends Component {
         width={320}
         gap={24}>
         <div>{content["header"]}</div>
-        <div>Column</div>
+        <div><LandingPage /></div>
         <div>Column</div>
         <div>Column</div>
       </Grid>
