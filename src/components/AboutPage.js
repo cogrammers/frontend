@@ -9,7 +9,6 @@ class About extends Component{
     }
   }
   render(){
-    // const aboutContent;
     return(
       <div id="about">
         <p><strong>Our mission is to foster a community based around the simple idea that a tech education should be accessible, ongoing, and engaging. We are based around the following pillars:</strong></p>

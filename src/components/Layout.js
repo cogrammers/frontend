@@ -26,7 +26,9 @@ class Layout extends Component {
           <Grid
             width={320}
             gap={24}>
-            <div id="logo">abd</div>
+            <div id="logo">
+              <img src={require("../static/img/logo.jpg")}/>
+            </div>
             <div>{innerContent}</div>
             <div>ggggg</div>
             <div>sdjfhaslhf</div>
