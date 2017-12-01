@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 import Grid from 'react-css-grid';
 import './App.css';
-import Content from './components/Content';
-import Mission from './components/Mission';
+// import Content from './components/Content';
+// import Mission from './components/Mission';
+// import Content from './data/content';
+
+const content = {
+  "header": "Welcome to Cogrammers!",
+  "mission": "blahhhhh",
+  "about": {
+    "oss": "dgyduf",
+    "community": "djhgfsdkfj",
+    "inclusive": "hfdfhff"
+  },
+  "contact": {
+    "twitter": "jdhgjkh",
+    "email": "fhjsdf",
+    "meetup": "kakjasijoi"
+  }
+}
 
 class App extends Component {
   constructor(){
@@ -16,7 +32,7 @@ class App extends Component {
       <Grid
         width={320}
         gap={24}>
-        <div>Column</div>
+        <div>{content["header"]}</div>
         <div>Column</div>
         <div>Column</div>
         <div>Column</div>
