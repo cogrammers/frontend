@@ -3,23 +3,31 @@ import Grid from 'react-css-grid';
 import LandingPage from './LandingPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
+import Menu from './Menu';
+import data from '../data/data';
 
 class Layout extends Component {
   constructor(){
     super()
     this.state = {
-      currentPage: 'layout'
+      currentPage: ''
     }
   }
+
+  getClickedContent: function(e) {
+    this.setState({
+    })
+  }
+
   render() {
-    let innerContent;
-    if(this.state.currentPage === 'landingPage') {
-      innerContent = <LandingPage />;
-    } else if(this.state.currentPage === 'aboutPage') {
-      innerContent = <AboutPage />;
-    } else if(this.state.currentPage === 'contactPage') {
-      innerContent = <ContactPage />;
-    }
+    // let innerContent;
+    // if(this.state.currentPage === 'landingPage') {
+    //   innerContent = <LandingPage />;
+    // } else if(this.state.currentPage === 'aboutPage') {
+    //   innerContent = <AboutPage />;
+    // } else if(this.state.currentPage === 'contactPage') {
+    //   innerContent = <ContactPage />;
+    // }
     return (
       <div className="app-container">
         <header>This is the header</header>
@@ -29,9 +37,15 @@ class Layout extends Component {
             <div id="logo">
               <img src={require("../static/img/logo.jpg")}/>
             </div>
-            <div>{innerContent}</div>
-            <div>ggggg</div>
-            <div>sdjfhaslhf</div>
+            <div>
+              line goes here
+            </div>
+            <div>
+              {innerContent}
+            </div>
+            <div>
+              <Menu items={data} />
+            </div>
           </Grid>
         <div className="app-content">{this.props.children}</div>
         <footer>
