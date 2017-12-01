@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class About extends Component{
+class AboutPage extends Component{
   constructor(){
     super()
     this.state = {

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import MenuItemLink from './MenuItemLink';
+import MenuItemLink from './MenuItemLink'
 
 class MenuItem extends Component {
-  generateLink: function() {
-    return <NavBarLink url={this.props.url} text={this.props.text} />;
+  var generateLink = () => {
+    return <MenuItemLink url={this.props.url} text={this.props.text} />;
   },
-  generateContent: function() {
-    var content = [this.generateLink()];
+  var generateContent = () => {
+    let content = [this.generateLink()];
     return content;
   },
-  render: function() {
-    var content = this.generateContent();
+  render() {
+    let content = this.generateContent();
     return (
       <li>
         {content}

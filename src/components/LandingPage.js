@@ -9,7 +9,7 @@ class LandingPage extends Component {
       currentPage: 'landingPage'
     }
   }
-  render(){
+  render() {
     return(
       <div id="mission">
         {missionStatement}

@@ -14,10 +14,10 @@ class Layout extends Component {
     }
   }
 
-  getClickedContent: function(e) {
-    this.setState({
-    })
-  }
+  // getClickedContent: function(e) {
+  //   this.setState({
+  //   })
+  // }
 
   render() {
     // let innerContent;
