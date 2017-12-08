@@ -7,3 +7,5 @@ class MenuItemLink extends Component {
     )
   }
 }
+
+export default MenuItemLink;

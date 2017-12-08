@@ -10,14 +10,16 @@ class Layout extends Component {
   constructor(){
     super()
     this.state = {
-      currentPage: ''
+      currentPage: <LandingPage />
     }
   }
 
-  // getClickedContent: function(e) {
-  //   this.setState({
-  //   })
-  // }
+  onClickHandler = (e) => {
+    // this.setState({
+    //   currentPage:
+    // })
+    console.log(e);
+  }
 
   render() {
     // let innerContent;
@@ -41,13 +43,13 @@ class Layout extends Component {
               line goes here
             </div>
             <div>
-              {innerContent}
+              {this.state.currentPage}
             </div>
             <div>
-              <Menu items={data} />
+              <Menu items={data} onClickHandler={this.onClickHandler.bind(this)} />
             </div>
           </Grid>
-        <div className="app-content">{this.props.children}</div>
+         <div className="app-content">{this.props.children}</div>
         <footer>
           <p>This is the footer</p>
         </footer>

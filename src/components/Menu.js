@@ -4,10 +4,10 @@ import data from '../data/data';
 
 
 class Menu extends Component {
+  generateItem = (item, index) => {
+    return <MenuItem text={item.text} url={item.url} keyItem={item.text + index} />
+  }
   render() {
-    generateItem = (item) => {
-      return <MenuItem text={item.text} url={item.url} />
-    }
     var items = this.props.items.map(this.generateItem);
     return (
       <ul className="menu">
@@ -15,3 +15,5 @@ class Menu extends Component {
       </ul>
     )}
   }
+
+export default Menu;
