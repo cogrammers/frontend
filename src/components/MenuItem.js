@@ -3,10 +3,11 @@ import MenuItemLink from './MenuItemLink'
 
 class MenuItem extends Component {
   generateLink = () => {
-    return <MenuItemLink url={this.props.url} text={this.props.text} />;
+    console.log(this.props.keyItem);
+    return <MenuItemLink url={this.props.url} text={this.props.text} onClick={this.props.onClick} />;
   }
   generateContent = () => {
-    let content = [this.generateLink()];
+    let content = this.generateLink();
     return content;
   }
   render() {

@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class MenuItemLink extends Component {
   render() {
     return (
-      <a href={this.props.url}>{this.props.text}</a>
+      <a onClick={this.props.onClick} id={this.props.parent}
+      identifyingInformation={this.props.text} href={this.props.url}>{this.props.text}</a>
     )
   }
 }

@@ -18,7 +18,8 @@ class Layout extends Component {
     // this.setState({
     //   currentPage:
     // })
-    console.log(e);
+    console.log(e.target)
+    console.log(e.target.getAttribute('identifyingInformation'));
   }
 
   render() {
@@ -49,7 +50,7 @@ class Layout extends Component {
               <Menu items={data} onClickHandler={this.onClickHandler.bind(this)} />
             </div>
           </Grid>
-         <div className="app-content">{this.props.children}</div>
+         <div className="app-content"></div>
         <footer>
           <p>This is the footer</p>
         </footer>
