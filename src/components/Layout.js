@@ -19,7 +19,20 @@ class Layout extends Component {
     //   currentPage:
     // })
     console.log(e.target)
-    console.log(e.target.getAttribute('identifyingInformation'));
+    console.log(e.target.getAttribute('id'));
+    if(e.target.getAttribute('id') === "Contact Us") {
+      this.setState({
+        currentPage: <ContactPage />
+      })
+    } else if(e.target.getAttribute('id') === "About") {
+      this.setState({
+        currentPage: <AboutPage />
+      })
+    } else if(e.target.getAttribute('id') === "Home"){
+      this.setState({
+        currentPage: <LandingPage />
+      })
+    }
   }
 
   render() {
