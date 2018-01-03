@@ -15,6 +15,10 @@
   margin-top: 17%
 }
 
+.force-overflow {
+    min-height: 450px;
+}
+
 #logo {
   width: 100%;
 }
@@ -23,17 +27,6 @@
   width: 40%;
   padding-left: 15px;
   font-size: 22px;
-}
-
-.scrollbar {
-    background-color: #F5F5F5;
-    float: left;
-    height: 300px;
-    margin-bottom: 25px;
-    margin-left: 22px;
-    margin-top: 40px;
-    width: 65px;
-       overflow-y: scroll;
 }
 
 ul {

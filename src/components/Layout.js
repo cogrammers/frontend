@@ -6,6 +6,7 @@ import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import Menu from './Menu';
 import data from '../data/data';
+import '../App.css';
 
 class Layout extends Component {
   constructor(){
@@ -73,8 +74,10 @@ class Layout extends Component {
                   </div>
                 </Col>
 
-                <Col sm={4} className="content scrollbar" id="style-1" >
-                  {this.state.currentPage}
+                <Col sm={4} className="content" >
+                  <div class="force-overflow">
+                    {this.state.currentPage}
+                  </div>
                 </Col>
 
                 <Col sm={3} className="menu" >
