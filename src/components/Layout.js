@@ -73,7 +73,7 @@ class Layout extends Component {
                   </div>
                 </Col>
 
-                <Col sm={4} className="content" >
+                <Col sm={4} className="content scrollbar" id="style-1" >
                   {this.state.currentPage}
                 </Col>
 
