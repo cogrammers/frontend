@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-
 import LandingPage from './LandingPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import Menu from './Menu';
 import data from '../data/data';
-import '../App.css';
 
 class Layout extends Component {
   constructor(){
@@ -38,6 +36,10 @@ class Layout extends Component {
   }
 
   render() {
+    const myScrollbar = {
+      width: 400,
+      height: 400,
+    };
     // let innerContent;
     // if(this.state.currentPage === 'landingPage') {
     //   innerContent = <LandingPage />;
@@ -73,7 +75,6 @@ class Layout extends Component {
                     </p>
                   </div>
                 </Col>
-
                 <Col sm={4} className="content" >
                   <div class="force-overflow">
                     {this.state.currentPage}
