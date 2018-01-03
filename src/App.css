@@ -1,7 +1,30 @@
+.body-content {
+  text-align: center;
+  margin-top: 20%;
+}
+
 .app-header {
   text-align: center;
   font-size: 13vw;
 }
 .content {
-  margin-top: 20vh;
+  width: 75%;
+  font-size: 17px;
+  height: 300px;
+  margin-top: 17%
+}
+
+.menu {
+  width: 40%;
+  padding-left: 15px;
+  font-size: 22px;
+}
+
+#logo {
+  width: 100%;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Grid from 'react-css-grid';
+import { Container, Row, Col } from 'react-grid-system';
+
 import LandingPage from './LandingPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
@@ -45,29 +46,43 @@ class Layout extends Component {
     //   innerContent = <ContactPage />;
     // }
     return (
-      <div className="app-container">
-        <header>This is the header</header>
-          <Grid
-            width={320}
-            gap={24}>
-            <div id="logo">
-              <img src={require("../static/img/logo.jpg")}/>
-            </div>
-            <div>
-              line goes here
-            </div>
-            <div>
-              {this.state.currentPage}
-            </div>
-            <div>
-              <Menu items={data} onClickHandler={this.onClickHandler.bind(this)} />
-            </div>
-          </Grid>
-         <div className="app-content"></div>
-        <footer>
-          <p>This is the footer</p>
-        </footer>
-      </div>
+          <Container className="body-content">
+              <Row align="center" style={{ height: '300px' }} >
+
+                <Col sm={1} >
+                </Col>
+
+                <Col sm={3} >
+                  <img id="logo" src={require("../static/img/logo.jpg")}/>
+                </Col>
+
+                <Col sm={1} >
+                  <div>
+                    <p>
+                      <strong>I</strong>
+                    </p>
+                    <p>
+                      <strong>I</strong>
+                    </p>
+                    <p>
+                      <strong>I</strong>
+                    </p>
+                    <p>
+                      <strong>I</strong>
+                    </p>
+                  </div>
+                </Col>
+
+                <Col sm={4} className="content" >
+                  {this.state.currentPage}
+                </Col>
+
+                <Col sm={3} className="menu" >
+                  <Menu items={data} onClickHandler={this.onClickHandler.bind(this)} />
+                </Col>
+
+              </Row>
+          </Container>
     )
   }
 }
