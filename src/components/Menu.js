@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import MenuItem from './MenuItem';
-//import data from '../data/data';
-
 
 class Menu extends Component {
-  generateItem = (item, index) => {
-    return <MenuItem text={item.text} url={item.url} keyItem={item.text + index} onClick={this.props.onClickHandler} />
+  generateLink({text, index}) {
+    const onClick = () => this.props.onClick(index);
+    return <li onClick={onClick}><a href="#" key={index}>{text}</a></li>;
   }
   render() {
-    var items = this.props.items.map(this.generateItem);
+    const links = this.props.items.map(({text}, i) => this.generateLink({text, index: i}));
     return (
       <ul className="menu">
-        {items}
+        {links}
       </ul>
-    )}
+    )
   }
+}
 
 export default Menu;

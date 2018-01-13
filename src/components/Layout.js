@@ -6,71 +6,78 @@ import LandingPage from './LandingPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import Menu from './Menu';
-import data from '../data/data';
+
+const menuData = [
+  {
+    text: 'Home',
+    component: <LandingPage />,
+  },
+  {
+    text: 'About',
+    component: <AboutPage />,
+  },
+  {
+    text: 'Contact Us',
+    component: <ContactPage />,
+  },
+];
 
 class Layout extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
+    this.onMenuClick = this.onMenuClick.bind(this);
     this.state = {
-      currentPage: <LandingPage />
+      subPage: <LandingPage />
     }
   }
 
-  onClickHandler = (e) => {
-    if(e.target.getAttribute('id') === "Contact Us") {
-      this.setState({
-        currentPage: <ContactPage />
-      })
-    } else if(e.target.getAttribute('id') === "About") {
-      this.setState({
-        currentPage: <AboutPage />
-      })
-    } else if(e.target.getAttribute('id') === "Home"){
-      this.setState({
-        currentPage: <LandingPage />
-      })
+  onMenuClick(index) {
+    if (!menuData[index]) {
+      console.error('Unexpected menu item clicked', index);
     }
+    this.setState({subPage: menuData[index].component});
   }
 
   render() {
+    const items = menuData.map(d => ({ text: d.text }));
     return (
-          <Container className="body-content">
-              <Row align="center" style={{ height: '300px' }} >
+      <Container className="body-content">
+        <Row align="center" style={{ height: '300px' }} >
 
-                <Col sm={1} >
-                </Col>
+          <Col sm={1} >
+          </Col>
 
-                <Col sm={3} >
-                  <Logo />
-                </Col>
+          <Col sm={3} >
+            <Logo />
+          </Col>
 
-                <Col sm={1} >
-                  <div>
-                    <p>
-                      <strong>I</strong>
-                    </p>
-                    <p>
-                      <strong>I</strong>
-                    </p>
-                    <p>
-                      <strong>I</strong>
-                    </p>
-                    <p>
-                      <strong>I</strong>
-                    </p>
-                  </div>
-                </Col>
+          <Col sm={1} >
+            <div>
+              <p>
+                <strong>I</strong>
+              </p>
+              <p>
+                <strong>I</strong>
+              </p>
+              <p>
+                <strong>I</strong>
+              </p>
+              <p>
+                <strong>I</strong>
+              </p>
+            </div>
+          </Col>
 
-                <Col sm={4} className="content" >
-                  {this.state.currentPage}
-                </Col>
+          <Col sm={4} className="content" >
+            {this.state.subPage}
+          </Col>
 
-                <Col sm={3} className="menu" >
-                  <Menu items={data} onClickHandler={this.onClickHandler.bind(this)} />
-                </Col>
+          <Col sm={3} className="menu" >
+            <Menu items={items} onClick={this.onMenuClick} />
+          </Col>
 
-              </Row>
-          </Container>
+        </Row>
+      </Container>
     )
   }
 }
