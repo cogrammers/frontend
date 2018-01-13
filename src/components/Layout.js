@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 
+import Logo from './Logo';
 import LandingPage from './LandingPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
@@ -53,7 +54,7 @@ class Layout extends Component {
                 </Col>
 
                 <Col sm={3} >
-                  <img id="logo" alt="Cogrammers logo with two gears" src={require("../static/img/logo.jpg")}/>
+                  <Logo />
                 </Col>
 
                 <Col sm={1} >
