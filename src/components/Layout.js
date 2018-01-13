@@ -17,11 +17,6 @@ class Layout extends Component {
   }
 
   onClickHandler = (e) => {
-    // this.setState({
-    //   currentPage:
-    // })
-    console.log(e.target)
-    console.log(e.target.getAttribute('id'));
     if(e.target.getAttribute('id') === "Contact Us") {
       this.setState({
         currentPage: <ContactPage />
@@ -38,14 +33,6 @@ class Layout extends Component {
   }
 
   render() {
-    // let innerContent;
-    // if(this.state.currentPage === 'landingPage') {
-    //   innerContent = <LandingPage />;
-    // } else if(this.state.currentPage === 'aboutPage') {
-    //   innerContent = <AboutPage />;
-    // } else if(this.state.currentPage === 'contactPage') {
-    //   innerContent = <ContactPage />;
-    // }
     return (
           <Container className="body-content">
               <Row align="center" style={{ height: '300px' }} >
