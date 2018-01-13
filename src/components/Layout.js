@@ -53,7 +53,7 @@ class Layout extends Component {
                 </Col>
 
                 <Col sm={3} >
-                  <img id="logo" src={require("../static/img/logo.jpg")}/>
+                  <img id="logo" alt="Cogrammers logo with two gears" src={require("../static/img/logo.jpg")}/>
                 </Col>
 
                 <Col sm={1} >
