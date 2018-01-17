@@ -8,16 +8,20 @@
   font-size: 13vw;
 }
 .content {
-  width: 75%;
+  width: 70%;
   font-size: 17px;
   height: 300px;
-  margin-top: 17%
+  margin-top: 14%;
+  margin-left: 230px;
+  float: right;
 }
 
 .menu {
-  width: 40%;
-  padding-left: 15px;
+  margin-top: 1%;
+  width: 100px;
+  padding-left: 30px;
   font-size: 22px;
+  float: left;
 }
 
 #logo {
@@ -59,4 +63,10 @@ ul {
 .contact-logo.small {
   height: 105px;
   transform: translateY(-18px);
+}
+
+#mission {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -42,12 +42,16 @@ class Layout extends Component {
           <Logo includeText={true}/>
         </Row>
         <Row align="center" style={{ height: '300px' }} >
+          <Col sm={3}>
+          </Col>
           <Col sm={4} className="content" >
             {this.state.subPage}
           </Col>
 
-          <Col sm={3} className="menu" >
+          <Col sm={4} className="menu" >
             <Menu items={items} onClick={this.onMenuClick} />
+          </Col>
+          <Col sm={1}>
           </Col>
 
         </Row>
