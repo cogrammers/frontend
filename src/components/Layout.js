@@ -42,13 +42,15 @@ class Layout extends Component {
     const items = menuData.map(d => ({ text: d.text }));
     return (
       <Container className="body-content">
+        <Row align="center">
+          <Logo includeText={true}/>
+        </Row>
         <Row align="center" style={{ height: '300px' }} >
 
           <Col sm={1} >
           </Col>
 
           <Col sm={3} >
-            <Logo />
           </Col>
 
           <Col sm={1} >
