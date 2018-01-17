@@ -16,10 +16,6 @@ const menuData = [
     text: 'About',
     component: <AboutPage />,
   },
-  {
-    text: 'Contact Us',
-    component: <ContactPage />,
-  },
 ];
 
 class Layout extends Component {
@@ -46,30 +42,6 @@ class Layout extends Component {
           <Logo includeText={true}/>
         </Row>
         <Row align="center" style={{ height: '300px' }} >
-
-          <Col sm={1} >
-          </Col>
-
-          <Col sm={3} >
-          </Col>
-
-          <Col sm={1} >
-            <div>
-              <p>
-                <strong>I</strong>
-              </p>
-              <p>
-                <strong>I</strong>
-              </p>
-              <p>
-                <strong>I</strong>
-              </p>
-              <p>
-                <strong>I</strong>
-              </p>
-            </div>
-          </Col>
-
           <Col sm={4} className="content" >
             {this.state.subPage}
           </Col>
@@ -78,6 +50,9 @@ class Layout extends Component {
             <Menu items={items} onClick={this.onMenuClick} />
           </Col>
 
+        </Row>
+        <Row align="center">
+          <ContactPage />
         </Row>
       </Container>
     )
