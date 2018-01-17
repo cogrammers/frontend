@@ -28,3 +28,11 @@ ul {
     list-style: none;
     text-align: left;
 }
+
+html {
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(135deg,#0F82F5, white, white)
+}
