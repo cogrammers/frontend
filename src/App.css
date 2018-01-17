@@ -1,3 +1,11 @@
+html {
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(135deg,#0F82F5, white, white)
+}
+
 .body-content {
   text-align: center;
   margin-top: 20%;
@@ -29,10 +37,15 @@ ul {
     text-align: left;
 }
 
-html {
-  height: 100vh;
+#contact {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
-body {
-  background: linear-gradient(135deg,#0F82F5, white, white)
+#contact a {
+  border: 1px solid red;
+  padding: 8px 15px;
 }

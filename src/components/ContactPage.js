@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import email from '../assets/icons/email.png';
 
 class ContactPage extends Component{
   constructor(){
@@ -11,7 +11,7 @@ class ContactPage extends Component{
   render(){
     return(
       <div id="contact">
-        <a href="mailto:info@cogrammers.community">Email</a>
+        <a href="mailto:info@cogrammers.community"><img src={email}/></a>
         <a href="https://www.linkedin.com/company/cogrammers">LinkedIn</a>
         <a href="https://www.meetup.com/cogrammers">Meetup</a>
         <a href="https://www.facebook.com/cogrammers">Facebook</a>
