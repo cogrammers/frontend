@@ -17,11 +17,11 @@ class ContactPage extends Component{
   render(){
     return(
       <div id="contact">
-        <a href="mailto:info@cogrammers.community"><img className="contact-logo" src={MailIcon}/></a>
-        <a href="https://www.linkedin.com/company/cogrammers"><img className="contact-logo" src={LinkedInIcon}/></a>
-        <a href="https://www.meetup.com/cogrammers"><img className="contact-logo small" src={Meetup}/></a>
-        <a href="https://www.facebook.com/cogrammers"><img className="contact-logo" src={FacebookIcon}/></a>
-        <a href="https://www.twitter.com/cogrammers"><img className="contact-logo" src={TwitterIcon}/></a>
+        <a href="mailto:info@cogrammers.community"><img className="contact-logo" src={MailIcon} alt="Email Icon"/></a>
+        <a href="https://www.linkedin.com/company/cogrammers"><img className="contact-logo" src={LinkedInIcon} alt="LinkedIn Logo icon"/></a>
+        <a href="https://www.meetup.com/cogrammers"><img className="contact-logo small" src={Meetup} alt="Meetup Logo icon"/></a>
+        <a href="https://www.facebook.com/cogrammers"><img className="contact-logo" src={FacebookIcon} alt="Facebook Logo icon"/></a>
+        <a href="https://www.twitter.com/cogrammers"><img className="contact-logo" src={TwitterIcon} alt="Twitter Logo icon"/></a>
       </div>
     )
   }
