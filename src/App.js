@@ -6,7 +6,9 @@ class App extends Component {
 
   render() {
     return (
-      <Layout />
+      <div className="full-container">
+        <Layout />
+      </div>
     )
   }
 }

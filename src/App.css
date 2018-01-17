@@ -1,11 +1,3 @@
-html {
-  height: 100vh;
-}
-
-body {
-  background: linear-gradient(135deg,#0F82F5, white, white)
-}
-
 .body-content {
   text-align: center;
   margin-top: 20%;
@@ -43,9 +35,26 @@ ul {
   width: 80%;
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }
 
-#contact a {
-  border: 1px solid red;
-  padding: 8px 15px;
+#contact > a {
+  z-index: 10;
+  transition: .25s;
+}
+
+#contact > a:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.contact-logo {
+  height: 70px;
+}
+
+
+/* meetup logo is a little smaller looking because of splatters */
+.contact-logo.small {
+  height: 105px;
+  transform: translateY(-18px);
 }
