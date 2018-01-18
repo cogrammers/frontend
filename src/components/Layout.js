@@ -5,51 +5,31 @@ import Logo from './Logo';
 import LandingPage from './LandingPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
-import Menu from './Menu';
-
-const menuData = [
-  {
-    text: 'Home',
-    component: <LandingPage />,
-  },
-  {
-    text: 'About',
-    component: <AboutPage />,
-  },
-];
 
 class Layout extends Component {
   constructor() {
     super();
-    this.onMenuClick = this.onMenuClick.bind(this);
     this.state = {
-      subPage: <LandingPage />
+      subPage: <AboutPage />
     }
-  }
-
-  onMenuClick(index) {
-    if (!menuData[index]) {
-      console.error('Unexpected menu item clicked', index);
-    }
-    this.setState({subPage: menuData[index].component});
   }
 
   render() {
-    const items = menuData.map(d => ({ text: d.text }));
     return (
       <Container className="body-content">
         <Row align="center">
-          <Logo includeText={true}/>
+          <Col md={3} />
+          <Col md={6}>
+            <Logo includeText={true}/>
+          </Col>
+          <Col md={3} />
         </Row>
-        <Row align="center" style={{ height: '300px' }} >
-          <Col sm={4} className="content" >
+        <Row align="center">
+          <Col md={3} />
+          <Col md={6}>
             {this.state.subPage}
           </Col>
-
-          <Col sm={3} className="menu" >
-            <Menu items={items} onClick={this.onMenuClick} />
-          </Col>
-
+          <Col md={3} />
         </Row>
         <Row align="center">
           <ContactPage />
