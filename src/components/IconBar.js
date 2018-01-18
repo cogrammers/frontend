@@ -4,7 +4,7 @@ class IconBar extends Component {
   createIcons() {
     return this.props.icons.map((icon, i) => {
       const onClick = () => this.props.onClick(i);
-      return React.cloneElement(icon, { onClick, key: i })
+      return <i className={`fa fa-4x ${icon}`} onClick={onClick} key={i} />;
     });
   }
 
