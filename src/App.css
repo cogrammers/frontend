@@ -60,3 +60,33 @@ ul {
   height: 105px;
   transform: translateY(-18px);
 }
+
+.app-splash-container {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.app-layout-container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.app > .fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 750ms linear;
+}
+
+.app > .fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 250ms, opacity 500ms linear;
+}
+
+.hide {
+  display: none;
+}

@@ -23,7 +23,7 @@ class SplashScreen extends Component {
       targets: '.draw-me',
       strokeDashoffset: {
         value: [anime.setDashoffset, 0],
-        duration: 3000,
+        duration: 2000,
         easing: 'easeInOutSine'
       },
       complete: (anim) => {
@@ -41,13 +41,13 @@ class SplashScreen extends Component {
     if (e.nativeEvent.target === cog1 && e.nativeEvent.propertyName === 'transform') {
       setTimeout(() => {
         this.props.onDismiss();
-      }, 2000);
+      }, 1500);
     }
   }
 
   render() {
     return (
-      <div className="splashContainer" onClick={this.props.onDismiss}>
+      <div className="splash-container" onClick={this.props.onDismiss}>
         <div className="splash" onTransitionEnd={this.onAnimationEnd}>
           <SplashSvg />
         </div>
