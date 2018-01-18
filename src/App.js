@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AboutPage from './components/AboutPage';
+import Pillars from './components/Pillars';
 import Layout from './components/Layout';
 import SplashScreen from './components/SplashScreen';
 
@@ -36,6 +37,7 @@ class App extends Component {
         <div className={layoutStyle}>
           <Layout>
             <AboutPage />
+            <Pillars />
           </Layout>
         </div>
       </div>
