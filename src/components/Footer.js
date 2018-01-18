@@ -5,6 +5,8 @@ import Meetup from '../assets/icons/meetup-icon.svg';
 import FacebookIcon from '../assets/icons/facebook-icon.svg';
 import TwitterIcon from '../assets/icons/twitter-icon.svg';
 
+import './Footer.css';
+
 
 
 class Footer extends Component {
@@ -16,7 +18,7 @@ class Footer extends Component {
   }
   render(){
     return(
-      <div id="contact">
+      <div className="contact">
         <a href="mailto:info@cogrammers.community"><img className="contact-logo" src={MailIcon} alt="Email Icon"/></a>
         <a href="https://www.linkedin.com/company/cogrammers"><img className="contact-logo" src={LinkedInIcon} alt="LinkedIn Logo icon"/></a>
         <a href="https://www.meetup.com/cogrammers"><img className="contact-logo small" src={Meetup} alt="Meetup Logo icon"/></a>

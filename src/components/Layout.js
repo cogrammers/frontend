@@ -22,7 +22,11 @@ class Layout extends Component {
           <Col md={3} />
         </Row>
         <Row align="center">
-          <Footer />
+          <Col md={2} />
+          <Col md={8}>
+            <Footer />
+          </Col>
+          <Col md={2} />
         </Row>
       </Container>
     )

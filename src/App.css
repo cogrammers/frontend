@@ -7,38 +7,6 @@ ul {
     text-align: left;
 }
 
-#contact {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
-
-#contact > a {
-  padding: 0 10px;
-  z-index: 10;   /*Not sure why but icons were not clickable without bringin the anchor up*/
-  transition: .35s;
-  filter: drop-shadow(2px 2px 4px rgba(51,51,51,0.18));
-}
-
-#contact > a:hover {
-  cursor: pointer;
-  transform: translateY(-4px);
-  filter: drop-shadow(4px 4px 4px rgba(51,51,51,0.28));
-}
-
-.contact-logo {
-  height: 70px;
-}
-
-/* meetup logo is a little smaller looking because of splatters */
-.contact-logo.small {
-  height: 105px;
-  transform: translateY(-18px);
-}
-
 .app-splash-container {
   position: absolute;
   z-index: 999;
