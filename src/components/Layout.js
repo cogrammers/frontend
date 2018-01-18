@@ -6,27 +6,21 @@ import Footer from './Footer';
 class Layout extends Component {
   render() {
     return (
-      <Container className="body-content">
+      <Container fluid={true} className="body-content">
         <Row align="center">
-          <Col md={3} />
-          <Col md={6}>
+          <Col md={12}>
             <Logo includeText={true}/>
           </Col>
-          <Col md={3} />
         </Row>
         <Row align="center">
-          <Col md={3} />
-          <Col md={6}>
+          <Col md={12}>
             {this.props.children}
           </Col>
-          <Col md={3} />
         </Row>
         <Row align="center">
-          <Col md={2} />
-          <Col md={8}>
+          <Col md={12}>
             <Footer />
           </Col>
-          <Col md={2} />
         </Row>
       </Container>
     )
