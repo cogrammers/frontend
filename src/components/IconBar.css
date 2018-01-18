@@ -1,0 +1,11 @@
+.icon-bar i.active {
+  color: #1da1f2;
+}
+
+.icon-bar i {
+  color: #313131;
+}
+
+.icon-bar i:hover {
+  text-shadow: 0px 0px 20px #1da1f2;
+}

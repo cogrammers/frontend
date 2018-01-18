@@ -49,7 +49,7 @@ class Pillars extends Component {
     const icons = data.map(({icon}) => icon);
     return (<div>
       <h2>Pillars</h2>
-      <IconBar icons={icons} onClick={this.onIconClick} />
+      <IconBar icons={icons} activeIcon={this.state.activePillar} onClick={this.onIconClick} />
       <h3>{title}</h3>
       {content}
     </div>)

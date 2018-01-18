@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import './IconBar.css';
 
 class IconBar extends Component {
   createIcons() {
     return this.props.icons.map((icon, i) => {
       const onClick = () => this.props.onClick(i);
-      return <i className={`fa fa-4x ${icon}`} onClick={onClick} key={i} />;
+      let className = `fa fa-4x ${icon}`;
+      if (this.props.activeIcon === i) {
+        className += ' active';
+      }
+      return <i className={className} onClick={onClick} key={i} />;
     });
   }
 
   render() {
     return (
-      <div>
+      <div className="icon-bar">
         {this.createIcons()}
       </div>
     );
