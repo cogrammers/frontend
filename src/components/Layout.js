@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-
 import Logo from './Logo';
-import LandingPage from './LandingPage';
-import AboutPage from './AboutPage';
-import ContactPage from './ContactPage';
+import Footer from './Footer';
 
 class Layout extends Component {
-  constructor() {
-    super();
-    this.state = {
-      subPage: <AboutPage />
-    }
-  }
-
   render() {
     return (
       <Container className="body-content">
@@ -27,12 +17,12 @@ class Layout extends Component {
         <Row align="center">
           <Col md={3} />
           <Col md={6}>
-            {this.state.subPage}
+            {this.props.children}
           </Col>
           <Col md={3} />
         </Row>
         <Row align="center">
-          <ContactPage />
+          <Footer />
         </Row>
       </Container>
     )

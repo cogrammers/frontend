@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AboutPage from './components/AboutPage';
 import Layout from './components/Layout';
 import SplashScreen from './components/SplashScreen';
 
@@ -33,7 +34,9 @@ class App extends Component {
           <SplashScreen onDismiss={this.onDismissLoadingScreen} />
         </div>
         <div className={layoutStyle}>
-          <Layout />
+          <Layout>
+            <AboutPage />
+          </Layout>
         </div>
       </div>
     )

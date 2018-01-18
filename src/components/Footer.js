@@ -7,7 +7,7 @@ import TwitterIcon from '../assets/icons/twitter-icon.svg';
 
 
 
-class ContactPage extends Component{
+class Footer extends Component {
   constructor(){
     super()
     this.state = {
@@ -28,4 +28,4 @@ class ContactPage extends Component{
 
 }
 
-export default ContactPage;
+export default Footer;
