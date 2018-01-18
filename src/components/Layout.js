@@ -1,32 +1,31 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
+import { Container, Row, Col, Hidden, Visible } from 'react-grid-system';
 import Logo from './Logo';
 import Footer from './Footer';
 
 class Layout extends Component {
   render() {
     return (
-      <Container className="body-content">
+      <Container fluid={true} className="body-content">
         <Row align="center">
-          <Col md={3} />
-          <Col md={6}>
-            <Logo includeText={true}/>
+          <Col md={12} style={{width: '200px'}}>
+            <Hidden xs sm>
+              <Logo includeText={true}/>
+            </Hidden>
+            <Visible xs sm>
+              <Logo includeText={false}/>
+            </Visible>
           </Col>
-          <Col md={3} />
         </Row>
         <Row align="center">
-          <Col md={3} />
-          <Col md={6}>
+          <Col md={12}>
             {this.props.children}
           </Col>
-          <Col md={3} />
         </Row>
         <Row align="center">
-          <Col md={2} />
-          <Col md={8}>
+          <Col md={12}>
             <Footer />
           </Col>
-          <Col md={2} />
         </Row>
       </Container>
     )

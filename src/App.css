@@ -7,6 +7,7 @@ ul {
     text-align: left;
 }
 
+
 .app-splash-container {
   position: absolute;
   z-index: 999;
@@ -19,6 +20,17 @@ ul {
   z-index: 1;
   top: 0;
   left: 0;
+}
+
+.body-content {
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+@media(max-width: 576px) {
+  .body-content {
+    max-width: 70%;
+  }
 }
 
 .app > .fade-in {
