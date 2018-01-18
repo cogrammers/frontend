@@ -1,0 +1,63 @@
+.splashContainer {
+  height:100vh;
+}
+
+.splash svg {
+  display: block;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.splash svg.filter {
+  filter: drop-shadow(2px 2px 3px rgba(51,51,51,0.3));
+}
+
+.splash .st0 {
+  fill: rgba(51,51,51,0);
+  stroke: rgb(51,51,51);
+  stroke-width: 5;
+  stroke-miterlimit:10;
+  transform: translateX(500px);
+}
+
+.splash .st2 {
+  fill: rgba(30,144,255,0);
+  stroke: rgb(30,144,255);
+  stroke-width: 5;
+  stroke-miterlimit:10;
+  transform: translateX(500px);
+}
+
+.splash .center-circle {
+  fill: rgba(51,51,51,0);
+  transform: translateX(500px);
+}
+
+.splash .title {
+  fill: rgba(30,144,255,0);
+  stroke: none;
+  stroke-miterlimit:10;
+}
+
+.splash .fade-in {
+  transition: 1.5s ease-in-out;
+  transform: translateX(0px);
+}
+
+.splash .st0.fade-in {
+  fill: rgba(51,51,51,1);
+}
+
+.splash .st2.fade-in {
+  fill: rgba(30,144,255,1);
+}
+
+.splash .center-circle.fade-in {
+  fill: rgba(30,144,255,1);
+}
+
+.splash .title.show {
+  transition-delay: 1.5s;
+  transition: .3s;
+  fill: rgba(51,51,51,1);
+}
