@@ -3,13 +3,16 @@ import './IconBar.css';
 
 class IconBar extends Component {
   createIcons() {
-    return this.props.icons.map((icon, i) => {
+    return this.props.icons.map(({icon, title}, i) => {
       const onClick = () => this.props.onClick(i);
-      let className = `fa fa-4x ${icon}`;
+      let className = 'icon-container';
       if (this.props.activeIcon === i) {
         className += ' active';
       }
-      return <i className={className} onClick={onClick} key={i} />;
+      return (<div onClick={onClick} className={className} key={i}>
+        <i className={`fa fa-4x ${icon}`} />
+        <div>{title}</div>
+      </div>);
     });
   }
 
