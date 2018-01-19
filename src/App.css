@@ -39,6 +39,7 @@ ul {
 .body-content {
   margin: 0 auto;
   max-width: 50%;
+  text-align: center;
 }
 
 @media(max-width: 576px) {
