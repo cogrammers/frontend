@@ -7,7 +7,6 @@
 }
 
 .splash svg {
-  display: block;
   width: 70vw;
 }
 
@@ -15,11 +14,14 @@
   filter: drop-shadow(2px 2px 3px rgba(51,51,51,0.3));
 }
 
+.miterlimit {
+  stroke-miterlimit:10;
+}
+
 .splash .st0 {
   fill: rgba(51,51,51,0);
   stroke: rgb(51,51,51);
   stroke-width: 5;
-  stroke-miterlimit:10;
   transform: translateX(500px);
 }
 
@@ -27,7 +29,7 @@
   fill: rgba(30,144,255,0);
   stroke: rgb(30,144,255);
   stroke-width: 5;
-  stroke-miterlimit:10;
+  /* stroke-miterlimit:10; */
   transform: translateX(500px);
 }
 
@@ -38,8 +40,8 @@
 
 .splash .title {
   fill: rgba(30,144,255,0);
-  stroke: none;
-  stroke-miterlimit:10;
+  /* stroke: none; */
+  /* stroke-miterlimit:10; */
 }
 
 .splash .fade-in {
