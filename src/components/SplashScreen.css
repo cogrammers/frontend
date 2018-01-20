@@ -7,39 +7,38 @@
 }
 
 .splash svg {
-  display: block;
   width: 70vw;
 }
 
 .splash svg.filter {
+  -webkit-filter: drop-shadow(2px 2px 3px rgba(51,51,51,0.3));
   filter: drop-shadow(2px 2px 3px rgba(51,51,51,0.3));
+}
+
+.splash .st0,
+.splash .st2,
+.splash .center-circle {
+  stroke-width: 5;
+  transform: translateX(500px);
+  stroke-miterlimit:10;
 }
 
 .splash .st0 {
   fill: rgba(51,51,51,0);
   stroke: rgb(51,51,51);
-  stroke-width: 5;
-  stroke-miterlimit:10;
-  transform: translateX(500px);
 }
 
 .splash .st2 {
   fill: rgba(30,144,255,0);
   stroke: rgb(30,144,255);
-  stroke-width: 5;
-  stroke-miterlimit:10;
-  transform: translateX(500px);
 }
 
 .splash .center-circle {
   fill: rgba(51,51,51,0);
-  transform: translateX(500px);
 }
 
 .splash .title {
   fill: rgba(30,144,255,0);
-  stroke: none;
-  stroke-miterlimit:10;
 }
 
 .splash .fade-in {
@@ -61,6 +60,6 @@
 
 .splash .title.show {
   transition-delay: 1.5s;
-  transition: .3s;
+  transition: 2.5s;
   fill: rgba(51,51,51,1);
 }
