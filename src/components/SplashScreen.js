@@ -25,6 +25,7 @@ class SplashScreen extends Component {
       targets: '.draw-me',
       strokeDashoffset: {
         value: [anime.setDashoffset, 0],
+        delay: 300,
         duration: 2000,
         easing: 'easeInOutSine'
       },

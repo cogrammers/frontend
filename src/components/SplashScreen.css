@@ -60,6 +60,6 @@
 
 .splash .title.show {
   transition-delay: 1.5s;
-  transition: 3s;
+  transition: 2.5s;
   fill: rgba(51,51,51,1);
 }
