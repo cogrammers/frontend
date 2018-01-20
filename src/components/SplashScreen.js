@@ -19,6 +19,8 @@ class SplashScreen extends Component {
     const title = document.querySelector('.title');
     const svg = document.querySelector('svg');
 
+    const allFadeInElements = [cog1, cog2, center];
+
     anime({
       targets: '.draw-me',
       strokeDashoffset: {
@@ -27,9 +29,7 @@ class SplashScreen extends Component {
         easing: 'easeInOutSine'
       },
       complete: (anim) => {
-        cog1.classList.add("fade-in");
-        cog2.classList.add("fade-in");
-        center.classList.add("fade-in");
+        allFadeInElements.forEach(element => element.classList.add("fade-in"));
         title.classList.add("show");
         svg.classList.add("filter");
       }
