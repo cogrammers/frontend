@@ -1,8 +1,10 @@
 .contact {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin: 20px 0;
   padding: 5px;
-  padding-top: 20px;
 }
 
 .contact > a {
@@ -19,11 +21,22 @@
 }
 
 .contact-logo {
-  height: 70px;
+  height: 60px;
 }
 
 /* meetup logo is a little smaller looking because of splatters */
 .contact-logo.small {
-  height: 105px;
-  transform: translateY(-18px);
+  height: 95px;
+}
+
+@media screen and (max-width: 1034px) {
+
+    .contact-logo {
+      height: 30px;
+    }
+
+    .contact-logo.small {
+      height: 55px;
+    }
+
 }
