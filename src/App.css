@@ -44,7 +44,7 @@ ul {
 
 @media(max-width: 576px) {
   .body-content {
-    max-width: 70%;
+    max-width: 90%;
   }
 }
 
