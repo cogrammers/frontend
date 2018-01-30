@@ -7,27 +7,51 @@ class PageSelector extends Component{
     this.handleSelection = this.handleSelection.bind(this);
   }
 
+
+  //button shift animation
   handleSelection = (e) => {
+    const allButtons = document.querySelectorAll('.page-button');
+    const buttonArray = [].slice.call(allButtons);
+    let button1Location = buttonArray[1].getBoundingClientRect().left;
+    let button2Location = buttonArray[2].getBoundingClientRect().left;
+    let button3Location = buttonArray[3].getBoundingClientRect().left;
+
     let clickedButton = e.currentTarget;
     let movingButton = document.getElementById('selected-button');
 
     let moveFromPosition = movingButton.getBoundingClientRect().left;
-    let moveToPosition = clickedButton.getBoundingClientRect().left;
 
-    let moveDistance = moveToPosition - moveFromPosition;
-
-    if (clickedButton.classList.contains('pair-button')) {
+    if (clickedButton === buttonArray[1]
+          && moveFromPosition === button1Location) {
           console.log('the pair button')
           movingButton.style.transform = `translateX(0px)`
-    } else if (clickedButton.classList.contains('learn-button')) {
+    } else if (clickedButton === buttonArray[1]
+          && moveFromPosition === button2Location) {
+          console.log('the pair button')
+          movingButton.style.transform = `translateX(0px)`
+    } else if (clickedButton === buttonArray[1]
+                && moveFromPosition === button3Location) {
+          console.log('the pair button')
+          movingButton.style.transform = `translateX(0px)`
+    } else if (clickedButton === buttonArray[2]
+                && moveFromPosition === button1Location) {
           console.log('the learn button')
-          movingButton.style.transform = `translateX(${moveDistance}px)`
-    } else if (clickedButton.classList.contains('grow-button')) {
+          movingButton.style.transform = `translateX(${button2Location - button1Location}px)`
+    } else if (clickedButton === buttonArray[2]
+                && moveFromPosition === button3Location) {
+          console.log('the learn button')
+          movingButton.style.transform = `translateX(${button2Location - button1Location}px)`
+    } else if (clickedButton === buttonArray[3]
+                && moveFromPosition === button1Location) {
           console.log('the grow button')
-          movingButton.style.transform = `translateX(${moveDistance * 2}px)`
+          movingButton.style.transform = `translateX(${button3Location - button1Location}px)`
+    } else if (clickedButton === buttonArray[3]
+                && moveFromPosition === button2Location) {
+          console.log('the grow button')
+          movingButton.style.transform = `translateX(${button3Location - button1Location}px)`
     }
 
-  }
+  }  // end buttonshift animation
 
 
   render(){
