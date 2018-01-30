@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Hidden, Visible } from 'react-grid-system';
 import Logo from './Logo';
 import Header from './header/Header';
+import AboutPage from './about/AboutPage';
 import Footer from './footer/Footer';
 
 class Layout extends Component {
@@ -11,9 +12,14 @@ class Layout extends Component {
     return (
         <div>
           <Header />
-          <div>
+
+
+          <div className="container div-center">
+            <AboutPage />
             {this.props.children}
           </div>
+
+
           <Footer/>
         </div>
 

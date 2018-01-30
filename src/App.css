@@ -54,6 +54,25 @@
           filter: drop-shadow(0 4px 6px rgba(50,50,93,.11));
 }
 
+/* Global Body Styles */
+.container {
+  width: 80%;
+}
+
+/*  About/Welcome Section Styles */
+
+#about {
+  margin-bottom: 50px;
+}
+
+#about h2 {
+  color: #38a9f6;
+  text-shadow: 0 4px 6px rgba(50,50,93,.11),
+               0 1px 3px rgba(0,0,0,.08);
+}
+
+
+
 
 /* Splash page fade in  */
 
