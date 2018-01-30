@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 
 
 class AboutPage extends Component{
-  constructor(){
-    super()
-    this.state = {
-      currentPage: 'aboutPage'
-    }
-  }
+
   render(){
     return(
       <div id="about" class="width-80 text-center div-center">
