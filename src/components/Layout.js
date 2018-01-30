@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Hidden, Visible } from 'react-grid-system';
 import Logo from './Logo';
 import Header from './header/Header';
-import Footer from './Footer';
+import Footer from './footer/Footer';
 
 class Layout extends Component {
 

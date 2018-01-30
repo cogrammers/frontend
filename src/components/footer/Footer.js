@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import FooterBackground from '../assets/footer-background.svg';
-import TagLogo from '../assets/footer-tag-logo.svg';
+import FooterBackground from '../../assets/footer-background.svg';
+import TagLogo from '../../assets/footer-tag-logo.svg';
 import './Footer.css';
 
 class Footer extends Component {
