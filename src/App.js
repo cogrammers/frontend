@@ -35,7 +35,6 @@ class App extends Component {
         </div>
         <div className={layoutStyle}>
           <Layout>
-            <hr />
             <Pillars />
           </Layout>
         </div>

@@ -20,6 +20,10 @@ h3 {
   font-size: 2rem;
 }
 
+h4 {
+  font-size: 1.4rem;
+}
+
 
 /* custom grid styles */
 
@@ -30,6 +34,10 @@ h3 {
 .div-center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .width-80 {
