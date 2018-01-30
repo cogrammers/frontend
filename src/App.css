@@ -74,6 +74,7 @@
 /* PageSelector Styles */
 
 #page-selector-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,7 +93,10 @@
   cursor: pointer;
 }
 
-.page-button.active {
+#selected-button {
+  position: absolute;
+  z-index: -5;
+  transition: .4s;
   background: linear-gradient(120deg, rgba(61,75,244, 0.7) , rgba(6,147,244, 0.7));
   box-shadow: 0 4px 6px rgba(50,50,93,.11),
               0 1px 3px rgba(0,0,0,.08);

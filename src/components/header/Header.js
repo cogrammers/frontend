@@ -8,7 +8,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div class="header-div">
+      <div className="header-div">
         <img id="header-background" alt="colorful background image" src={headerBackground}/>
         <img id="header-logo-name" alt="cogrammers logo name" src={LogoName}/>
         <img id="header-logo-gears" alt="Cogrammers logo" src={Logo}/>

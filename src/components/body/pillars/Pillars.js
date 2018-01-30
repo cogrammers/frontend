@@ -4,14 +4,14 @@ import PageSelector from './PageSelector'
 const data = [
   {
     title: 'Inclusive by design',
-    icon: 'fa-users',
+    icon: 'pair-button',
     content: (
       <p>If our mission is to be accessible, we must also be inclusive. Structural barriers and power hierarchies are abundant in society. These inequalities are not only present in the tech industry, but in many ways are exacerbated by it. Cogrammers aims to better our communities by being aware of these power imbalances, and to counter them where possible. We hold all of our members and our partnerships to these same standards. We pledge to listen to and uplift marginalized voices in our community. These voices are our foundation.</p>
     ),
   },
   {
     title: 'Community building',
-    icon: 'fa-home',
+    icon: 'grow-button',
     content: (
       <div>
         <p>A core hypothesis of Cogrammers is that the program should directly benefit all those involved, as well as the larger community. Students get an education, alumni grow their network, companies hire better employees, the community gets apps made for them, and more.</p>
@@ -21,7 +21,7 @@ const data = [
   },
   {
     title: 'Open source',
-    icon: 'fa-code-fork',
+    icon: 'learn-button',
     content: (
       <div>
         <p>Information is power, and information should be free. Cogrammers is radically transparent. Everything from the curriculum, the discussions, exams, company direction, and business plans should be transparent by default. Current students should feel just as encouraged to change the curriculum as staff or anyone else.</p>
@@ -41,7 +41,9 @@ class Pillars extends Component {
   }
 
   onIconClick(i) {
+    console.log(i)
     this.setState({activePillar: i});
+
   }
 
       // <IconBar icons={data} activeIcon={this.state.activePillar} onClick={this.onIconClick} />
@@ -50,7 +52,7 @@ class Pillars extends Component {
     const {content} = data[this.state.activePillar];
     return (
       <div>
-        <PageSelector />
+        <PageSelector activeIcon={this.state.activePillar} onClick={this.onIconClick} />
 
         {content}
       </div>
