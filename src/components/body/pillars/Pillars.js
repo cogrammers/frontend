@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import IconBar from './IconBar';
+import PageSelector from './PageSelector'
 
 const data = [
   {
@@ -44,13 +44,17 @@ class Pillars extends Component {
     this.setState({activePillar: i});
   }
 
+      // <IconBar icons={data} activeIcon={this.state.activePillar} onClick={this.onIconClick} />
+
   render() {
     const {content} = data[this.state.activePillar];
-    return (<div>
-      <h2>Pillars</h2>
-      <IconBar icons={data} activeIcon={this.state.activePillar} onClick={this.onIconClick} />
-      {content}
-    </div>)
+    return (
+      <div>
+        <PageSelector />
+
+        {content}
+      </div>
+    )
   }
 }
 

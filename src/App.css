@@ -87,12 +87,15 @@
   height: 50px;
   width: 120px;
   border: none;
+  border-radius: 2px;
   outline: 0;
   cursor: pointer;
 }
 
 .page-button.active {
   background: linear-gradient(120deg, rgba(61,75,244, 0.7) , rgba(6,147,244, 0.7));
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),
+              0 1px 3px rgba(0,0,0,.08);
 }
 
 
