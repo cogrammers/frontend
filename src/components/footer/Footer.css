@@ -21,3 +21,18 @@
   -webkit-filter: drop-shadow(0 4px 6px rgba(50,50,93,.11));
           filter: drop-shadow(0 4px 6px rgba(50,50,93,.11));
 }
+
+.social-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  max-width: 500px;
+  min-width: 400px;
+  bottom: 25px;
+  left: 25px;
+}
+
+.social-logo {
+  width: 60px;
+}
