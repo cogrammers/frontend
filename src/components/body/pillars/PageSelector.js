@@ -53,6 +53,17 @@ class PageSelector extends Component{
 
   }  // end buttonshift animation
 
+  componentDidMount() {
+      this.handleResize();
+      window.addEventListener('resize',  this.handleResize.bind(this));
+  }
+  ///remember to unbind during unmount
+
+
+  handleResize() {
+      console.log("I've been resized!");
+  }
+
 
   render(){
     return(
