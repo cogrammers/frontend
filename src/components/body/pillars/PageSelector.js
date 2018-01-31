@@ -13,7 +13,6 @@ class PageSelector extends Component{
       console.log("I've been resized!");
   }
 
-
   render(){
     return(
       <div id="page-selector-container" className="width-80 div-center">

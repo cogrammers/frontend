@@ -38,43 +38,20 @@ class Pillars extends Component {
 
     let moveFromPosition = movingButton.getBoundingClientRect().left;
 
-    if (clickedButton === buttonArray[1]
-          && moveFromPosition === button1Location) {
-          console.log('the pair button')
-          movingButton.style.transform = `translateX(0px)`
-          this.setState({activePillar: 'pair-button'})
-    } else if (clickedButton === buttonArray[1]
-          && moveFromPosition === button2Location) {
-          console.log('the pair button')
-          movingButton.style.transform = `translateX(0px)`
-          this.setState({activePillar: 'pair-button'})
-    } else if (clickedButton === buttonArray[1]
-                && moveFromPosition === button3Location) {
-          console.log('the pair button')
-          movingButton.style.transform = `translateX(0px)`
-          this.setState({activePillar: 'pair-button'})
-    } else if (clickedButton === buttonArray[2]
-                && moveFromPosition === button1Location) {
-          console.log('the learn button')
-          movingButton.style.transform = `translateX(${button2Location - button1Location}px)`
-          this.setState({activePillar: 'learn-button'})
-    } else if (clickedButton === buttonArray[2]
-                && moveFromPosition === button3Location) {
-          console.log('the learn button')
-          movingButton.style.transform = `translateX(${button2Location - button1Location}px)`
-          this.setState({activePillar: 'learn-button'})
-    } else if (clickedButton === buttonArray[3]
-                && moveFromPosition === button1Location) {
-          console.log('the grow button')
-          movingButton.style.transform = `translateX(${button3Location - button1Location}px)`
-          this.setState({activePillar: 'grow-button'})
-    } else if (clickedButton === buttonArray[3]
-                && moveFromPosition === button2Location) {
-          console.log('the grow button')
-          movingButton.style.transform = `translateX(${button3Location - button1Location}px)`
-          this.setState({activePillar: 'grow-button'})
+    if ((clickedButton === buttonArray[1] && moveFromPosition === button1Location)
+          || (clickedButton === buttonArray[1] && moveFromPosition === button2Location)
+            || (clickedButton === buttonArray[1] && moveFromPosition === button3Location)) {
+              movingButton.style.transform = `translateX(0px)`;
+              this.setState({activePillar: 'pair-button'});
+    } else if ((clickedButton === buttonArray[2] && moveFromPosition === button1Location)
+              || (clickedButton === buttonArray[2] && moveFromPosition === button3Location)) {
+              movingButton.style.transform = `translateX(${button2Location - button1Location}px)`;
+              this.setState({activePillar: 'learn-button'});
+    } else if ((clickedButton === buttonArray[3] && moveFromPosition === button1Location)
+              || (clickedButton === buttonArray[3] && moveFromPosition === button2Location)) {
+              movingButton.style.transform = `translateX(${button3Location - button1Location}px)`;
+              this.setState({activePillar: 'grow-button'});
     }
-
   }  // end buttonshift animation
 
 
