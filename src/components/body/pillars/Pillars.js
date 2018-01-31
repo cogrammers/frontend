@@ -64,7 +64,7 @@ class Pillars extends Component {
     return (
       <div style={{height: 400}}>
 
-      <PageSelector pageShift={this.handleSelection} />
+      <PageSelector pageShift={this.handleSelection} activePillar={this.state.activePillar}/>
 
       <ReactCSSTransitionReplace transitionName="carousel-swap"
                                   className="carousel-container div-center"

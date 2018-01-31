@@ -7,10 +7,22 @@ class PageSelector extends Component{
       this.handleResize();
       window.addEventListener('resize',  this.handleResize.bind(this));
   }
-  ///remember to unbind during unmount
+  // if issues come up with window resize, it may need to be unbinded when unmounting
 
   handleResize() {
-      console.log("I've been resized!");
+      let movingButton = document.getElementById('selected-button');
+      const allButtons = document.querySelectorAll('.page-button');
+      const buttonArray = [].slice.call(allButtons);
+      let button1Location = buttonArray[1].getBoundingClientRect().left;
+      let button2Location = buttonArray[2].getBoundingClientRect().left;
+      let button3Location = buttonArray[3].getBoundingClientRect().left;
+
+      console.log("current page: " + this.props.activePillar);
+      if (this.props.activePillar === "learn-button") {
+        movingButton.style.transform = `translateX(${button2Location - button1Location}px)`;
+      } else if (this.props.activePillar === "grow-button") {
+        movingButton.style.transform = `translateX(${button3Location - button1Location}px)`;
+      }
   }
 
   render(){
