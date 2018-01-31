@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
 import '../../../App.css';
 
 import PageSelector from './PageSelector'
@@ -65,16 +64,8 @@ class Pillars extends Component {
       <div>
 
       <PageSelector pageShift={this.handleSelection} />
-      <div>
-      <CSSTransitionGroup
-        transitionName="example"
-        transitionAppear={true}
-        transitionAppearTimeout={500}
-        transitionEnter={false}
-        transitionLeave={false}>
-        {this.renderContent(this.state.activePillar)}
-      </CSSTransitionGroup>
-      </div>
+
+      {this.renderContent(this.state.activePillar)}
 
       </div>
     )
