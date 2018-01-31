@@ -9,8 +9,9 @@ class Pillars extends Component {
   constructor() {
     super();
     this.state = {
-      activePillar: 'learn-button'
+      activePillar: 'pair-button'
     };
+    this.handleSelection = this.handleSelection.bind(this);
   }
 
   renderContent() {
@@ -24,16 +25,65 @@ class Pillars extends Component {
   }
 
 
+  //button shift animation
+  handleSelection = (e) => {
+    const allButtons = document.querySelectorAll('.page-button');
+    const buttonArray = [].slice.call(allButtons);
+    let button1Location = buttonArray[1].getBoundingClientRect().left;
+    let button2Location = buttonArray[2].getBoundingClientRect().left;
+    let button3Location = buttonArray[3].getBoundingClientRect().left;
+
+    let clickedButton = e.currentTarget;
+    let movingButton = document.getElementById('selected-button');
+
+    let moveFromPosition = movingButton.getBoundingClientRect().left;
+
+    if (clickedButton === buttonArray[1]
+          && moveFromPosition === button1Location) {
+          console.log('the pair button')
+          movingButton.style.transform = `translateX(0px)`
+          this.setState({activePillar: 'pair-button'})
+    } else if (clickedButton === buttonArray[1]
+          && moveFromPosition === button2Location) {
+          console.log('the pair button')
+          movingButton.style.transform = `translateX(0px)`
+          this.setState({activePillar: 'pair-button'})
+    } else if (clickedButton === buttonArray[1]
+                && moveFromPosition === button3Location) {
+          console.log('the pair button')
+          movingButton.style.transform = `translateX(0px)`
+          this.setState({activePillar: 'pair-button'})
+    } else if (clickedButton === buttonArray[2]
+                && moveFromPosition === button1Location) {
+          console.log('the learn button')
+          movingButton.style.transform = `translateX(${button2Location - button1Location}px)`
+          this.setState({activePillar: 'learn-button'})
+    } else if (clickedButton === buttonArray[2]
+                && moveFromPosition === button3Location) {
+          console.log('the learn button')
+          movingButton.style.transform = `translateX(${button2Location - button1Location}px)`
+          this.setState({activePillar: 'learn-button'})
+    } else if (clickedButton === buttonArray[3]
+                && moveFromPosition === button1Location) {
+          console.log('the grow button')
+          movingButton.style.transform = `translateX(${button3Location - button1Location}px)`
+          this.setState({activePillar: 'grow-button'})
+    } else if (clickedButton === buttonArray[3]
+                && moveFromPosition === button2Location) {
+          console.log('the grow button')
+          movingButton.style.transform = `translateX(${button3Location - button1Location}px)`
+          this.setState({activePillar: 'grow-button'})
+    }
+
+  }  // end buttonshift animation
 
 
-
-  
 
   render() {
     const {content} = this.state.activePillar;
     return (
       <div>
-        <PageSelector />
+        <PageSelector pageShift={this.handleSelection} />
         {this.renderContent(this.state.activePillar)}
       </div>
     )
