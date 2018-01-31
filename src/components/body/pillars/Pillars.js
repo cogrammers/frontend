@@ -24,6 +24,10 @@ class Pillars extends Component {
     }
   }
 
+  componentWillMount() {
+    
+  }
+
 
   //button shift animation
   handleSelection = (e) => {
