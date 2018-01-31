@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
+import '../../../App.css';
+
 import PageSelector from './PageSelector'
 import Pair from './Pair';
 import Grow from './Grow';
@@ -22,10 +25,6 @@ class Pillars extends Component {
     } else if (this.state.activePillar === 'learn-button') {
       return <Learn/>;
     }
-  }
-
-  componentWillMount() {
-    
   }
 
 
@@ -61,11 +60,22 @@ class Pillars extends Component {
 
 
   render() {
-    const {content} = this.state.activePillar;
+
     return (
       <div>
-        <PageSelector pageShift={this.handleSelection} />
+
+      <PageSelector pageShift={this.handleSelection} />
+      <div>
+      <CSSTransitionGroup
+        transitionName="example"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}>
         {this.renderContent(this.state.activePillar)}
+      </CSSTransitionGroup>
+      </div>
+
       </div>
     )
   }
