@@ -1,3 +1,20 @@
+/* Splash page fade in  */
+
+.app > .fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 750ms linear;
+}
+
+.app > .fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 250ms, opacity 500ms linear;
+}
+
+.hide {
+  display: none;
+}
 
 .app-splash-container {
   position: absolute;
@@ -76,6 +93,8 @@
 #page-selector-container {
   position: relative;
   display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   justify-content: space-between;
   align-items: center;
   height: 60px;
@@ -104,20 +123,34 @@
 }
 
 
-/* Splash page fade in  */
-
-.app > .fade-in {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 750ms linear;
+.pillar-container {
+  overflow-x: hidden;   /* Need this for animation containment */
+  overflow-y: visible;  /* Need this for animation containment */
 }
 
-.app > .fade-out {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 250ms, opacity 500ms linear;
+/*  Pillar Carousel animation  */
+.carousel-container {
+  width: 80%;
+  overflow-x: hidden;   /* Need this (double) for animation containment */
+  overflow-y: visible;  /* Need this (double) for animation containment */
 }
 
-.hide {
-  display: none;
+.carousel-swap-leave {
+  transition: transform .85s ease-in-out;
+  transform: translate(0, 0);
+}
+.carousel-swap-leave-active {
+  transform: translate(-100%, 0);
+}
+
+.carousel-swap-enter {
+  transition: transform .85s ease-in-out;
+  transform: translate(100%, 0);
+}
+.carousel-swap-enter-active {
+  transform: translate(0, 0);
+}
+
+.carousel-swap-height {
+  transition: height 1.5s ease-in-out;
 }

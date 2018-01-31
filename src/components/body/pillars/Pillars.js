@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import '../../../App.css';
 
 import PageSelector from './PageSelector'
@@ -18,11 +19,11 @@ class Pillars extends Component {
 
   renderContent() {
     if(this.state.activePillar === 'pair-button') {
-      return <Pair/>;
+      return <Pair key="pair"/>;
     } else if (this.state.activePillar === 'grow-button') {
-      return <Grow/>;
+      return <Grow key="grow"/>;
     } else if (this.state.activePillar === 'learn-button') {
-      return <Learn/>;
+      return <Learn key="learn"/>;
     }
   }
 
@@ -61,11 +62,20 @@ class Pillars extends Component {
   render() {
 
     return (
-      <div>
+      <div style={{height: 400}}>
 
       <PageSelector pageShift={this.handleSelection} />
 
-      {this.renderContent(this.state.activePillar)}
+      <ReactCSSTransitionReplace transitionName="carousel-swap"
+                                  className="carousel-container div-center"
+                                  overflowHidden={false}
+                                  transitionEnterTimeout={850}
+                                  transitionLeaveTimeout={850}>
+
+         {this.renderContent(this.state.activePillar)}
+
+      </ReactCSSTransitionReplace>
+
 
       </div>
     )
