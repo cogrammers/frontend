@@ -95,6 +95,8 @@
   display: flex;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   justify-content: space-between;
   align-items: center;
   height: 60px;
@@ -123,14 +125,41 @@
 }
 
 
+/*  Pillar styles  */
+
 .pillar-container {
+  padding: 0 10px;
   overflow-x: hidden;   /* Need this for animation containment */
   overflow-y: visible;  /* Need this for animation containment */
 }
 
+.pillar-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.pillar-content {
+  flex: 1;
+}
+
+.pillar-content > h3 {
+  line-height: 0.2;
+  color: #38a9f6;
+  text-shadow: 0 4px 6px rgba(50,50,93,.11),
+  0 1px 3px rgba(0,0,0,.08);
+}
+
+.image-placeholder {
+  border: 2px solid grey;
+  width: 50%;
+  height: 250px;
+}
+
 /*  Pillar Carousel animation  */
 .carousel-container {
-  width: 80%;
+  width: 100%;
   overflow-x: hidden;   /* Need this (double) for animation containment */
   overflow-y: visible;  /* Need this (double) for animation containment */
 }

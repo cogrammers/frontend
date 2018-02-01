@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -52,6 +55,30 @@ h4 {
   width: 80%;
 }
 
+.width-70 {
+  width: 70%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
 .width-50 {
   width: 50%;
+}
+
+.margin-right-15 {
+  margin-right: 15px;
+}
+
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+.remove-top-space {
+  -webkit-margin-before: 0em;
 }
