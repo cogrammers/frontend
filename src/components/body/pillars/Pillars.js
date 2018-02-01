@@ -62,7 +62,7 @@ class Pillars extends Component {
   render() {
 
     return (
-      <div style={{height: 400}}>
+      <div className="pillar-page">
 
       <PageSelector pageShift={this.handleSelection} activePillar={this.state.activePillar}/>
 

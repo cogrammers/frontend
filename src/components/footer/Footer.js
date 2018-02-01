@@ -14,7 +14,7 @@ class Footer extends Component {
     return(
       <div className="footer">
         <img id="footer-background" alt="colorful background made of overlapping shapes" src={FooterBackground}/>
-        <img id="header-logo-tagline" alt="Cogrammers logo and tagline" src={TagLogo}/>
+        <img id="footer-logo-tagline" alt="Cogrammers logo and tagline" src={TagLogo}/>
 
         <div className="social-container">
           <a href="mailto:info@cogrammers.community"><img className="social-logo" src={MailIcon} alt="Email Icon"/></a>

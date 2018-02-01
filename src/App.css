@@ -99,6 +99,7 @@
   margin-bottom: 2rem;
   justify-content: space-between;
   align-items: center;
+  width: 70%;
   height: 60px;
 }
 
@@ -126,6 +127,10 @@
 
 
 /*  Pillar styles  */
+
+.pillar-page {
+  height: 400px;
+}
 
 .pillar-container {
   padding: 0 10px;
@@ -201,7 +206,7 @@
   z-index: -10;
 }
 
-#header-logo-tagline {
+#footer-logo-tagline {
   position: absolute;
   bottom: 25px;
   right: 25px;
@@ -217,7 +222,7 @@
   justify-content: space-between;
   width: 40%;
   max-width: 500px;
-  min-width: 400px;
+  min-width: 350px;
   bottom: 25px;
   left: 25px;
 }
