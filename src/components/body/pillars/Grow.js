@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GrowPhoto from '../../../assets/photos/grow.jpg';
 
 class Grow extends Component {
 
@@ -14,8 +15,9 @@ class Grow extends Component {
             <p className="remove-top-space">A core hypothesis of Cogrammers is that the program should directly benefit all those involved, as well as the larger community. Students get an education, alumni grow their network, companies hire better employees, the community gets apps made for them, and more.</p>
             <p>The community aspect is incredibly important. Cogrammers is more than just a technical handbook. Everything we do is designed to help all of us grow as individuals. By learning empathy, communication, and teamworking skills, we become better people. We become better cohort mates, and better community members.</p>
           </div>
-          <div className="image-placeholder pillar-content margin-left-15">
-          placeholder for image
+
+          <div className="pillar-photo-container">
+             <img id="grow-photo" className="pillar-photo" alt="Unknown person sitting next to Dr. Seuss book" src={GrowPhoto}/>
           </div>
         </div>
 

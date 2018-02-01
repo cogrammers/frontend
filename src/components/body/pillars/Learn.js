@@ -10,7 +10,7 @@ class Learn extends Component {
       <div className="pillar-container">
         <div className="pillar-content-container">
 
-        <div className="pillar-photo-container margin-right-15">
+        <div className="pillar-photo-container">
            <img id="learn-photo" className="pillar-photo lighten" alt="Students at desks during a lesson" src={LearnPhoto}/>
         </div>
 
