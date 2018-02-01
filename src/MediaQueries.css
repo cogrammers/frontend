@@ -1,7 +1,7 @@
 @media screen
   and (max-width: 1100px) {
     body {
-      background-color: salmon;
+      /* background-color: salmon; */
     }
 
     .pillar-page {
@@ -14,7 +14,7 @@
   @media screen
     and (max-width: 805px) {
       body {
-        background-color: powderblue;
+        /* background-color: powderblue; */
       }
 
       #page-selector-container {
@@ -38,12 +38,22 @@
 @media screen
   and (max-width: 375px) {
     body {
-      background-color: royalblue;
+      /* background-color: royalblue; */
     }
 
     .container {
       width: 100%;
     }
+
+    /*  Header */
+    .header-div {
+      min-height: 300px;
+    }
+
+    #header-logo-name {
+      display: none;
+    }
+
 
 
     /* Footer */
