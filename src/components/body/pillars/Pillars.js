@@ -21,7 +21,7 @@ class Pillars extends Component {
       return <Pair key="pair"/>;
     } else if (this.state.activePillar === 'grow-button') {
       return <Grow key="grow"/>;
-    } else if (this.state.activePillar === 'learn-button') {
+    } else {
       return <Learn key="learn"/>;
     }
   }
