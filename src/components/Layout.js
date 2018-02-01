@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Logo from './Logo';
 import Header from './header/Header';
 import AboutPage from './about/AboutPage';
 import Pillars from './body/pillars/Pillars';

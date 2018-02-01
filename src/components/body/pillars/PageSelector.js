@@ -17,7 +17,6 @@ class PageSelector extends Component{
       let button2Location = buttonArray[2].getBoundingClientRect().left;
       let button3Location = buttonArray[3].getBoundingClientRect().left;
 
-      console.log("current page: " + this.props.activePillar);
       if (this.props.activePillar === "learn-button") {
         movingButton.style.transform = `translateX(${button2Location - button1Location}px)`;
       } else if (this.props.activePillar === "grow-button") {

@@ -9,7 +9,7 @@ class Footer extends Component {
   render(){
     return(
       <div className="footer">
-        <img id="footer-background" alt="colorful background image" src={FooterBackground}/>
+        <img id="footer-background" alt="colorful background made of overlapping shapes" src={FooterBackground}/>
         <img id="header-logo-tagline" alt="Cogrammers logo and tagline" src={TagLogo}/>
 
         <div className="social-container">
