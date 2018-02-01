@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FooterBackground from '../../assets/footer-background.svg';
 import TagLogo from '../../assets/footer-tag-logo.svg';
-import SocialPlaceholder from '../../assets/icons/placeholder.svg';
 import MailIcon from '../../assets/icons/mail-icon-gradient.svg';
 import LinkedinIcon from '../../assets/icons/linkedin-icon-gradient.svg';
 import MeetupIcon from '../../assets/icons/meetup-icon-gradient.svg';
