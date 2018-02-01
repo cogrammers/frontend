@@ -15,7 +15,7 @@ class Layout extends Component {
 
           <div className="container div-center">
             <AboutPage />
-            <hr />
+            <hr className="linebreak"/>
             <Pillars />
             {this.props.children}
           </div>

@@ -36,7 +36,7 @@
     }
 
 @media screen
-  and (max-width: 375px) {
+  and (max-width: 650px) {
     body {
       background-color: royalblue;
     }
@@ -54,11 +54,15 @@
       display: none;
     }
 
+    .linebreak {
+      width: 85%;
+    }
 
     /* Page Selector */
 
     #page-selector-container {
       width: 90%;
+      margin-bottom: 1rem;
     }
 
     .page-button {
@@ -74,6 +78,10 @@
 
     .pillar-content-container {
       flex-direction: column;
+    }
+
+    .pillar-content {
+      padding: 0 10px;
     }
 
     .pillar-content > h3 {
