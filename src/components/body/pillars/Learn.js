@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LearnPhoto from '../../../assets/photos/learn.jpg';
 
 class Learn extends Component {
 
@@ -9,9 +10,9 @@ class Learn extends Component {
       <div className="pillar-container">
         <div className="pillar-content-container">
 
-          <div className="image-placeholder pillar-content margin-right-15">
-           placeholder for image
-          </div>
+        <div className="pillar-photo-container margin-right-15">
+           <img id="learn-photo" className="pillar-photo lighten" alt="Students at desks during a lesson" src={LearnPhoto}/>
+        </div>
 
         <div className="pillar-content margin-left-15 text-right">
           <h3 className="text-right">Open Source</h3>
