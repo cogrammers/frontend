@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './MediaQueries.css'
 import Layout from './components/Layout';
 import SplashScreen from './components/SplashScreen';
 

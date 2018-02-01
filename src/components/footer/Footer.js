@@ -8,8 +8,6 @@ import MeetupIcon from '../../assets/icons/meetup-icon-gradient.svg';
 import FacebookIcon from '../../assets/icons/facebook-icon-gradient.svg';
 import TwitterIcon from '../../assets/icons/twitter-icon-gradient.svg';
 
-import './Footer.css';
-
 class Footer extends Component {
 
   render(){
