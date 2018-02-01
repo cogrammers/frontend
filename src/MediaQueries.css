@@ -38,7 +38,7 @@
 @media screen
   and (max-width: 375px) {
     body {
-      /* background-color: royalblue; */
+      background-color: royalblue;
     }
 
     .container {
@@ -53,6 +53,22 @@
     #header-logo-name {
       display: none;
     }
+
+
+    /* Page Selector */
+
+    #page-selector-container {
+      width: 90%;
+    }
+
+    .page-button {
+      width: 100px;
+    }
+
+
+    /* Pillar Section */
+
+
 
 
 
