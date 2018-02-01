@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
-import '../../../App.css';
 
 import PageSelector from './PageSelector'
 import Pair from './Pair';
