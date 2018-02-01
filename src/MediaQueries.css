@@ -68,8 +68,23 @@
 
     /* Pillar Section */
 
+    .pillar-page {
+      height: 700px;
+    }
 
+    .pillar-content-container {
+      flex-direction: column;
+    }
 
+    .pillar-content > h3 {
+      text-align: center;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
 
     /* Footer */
