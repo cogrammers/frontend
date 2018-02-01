@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Container, Row, Col, Hidden, Visible } from 'react-grid-system';
 import headerBackground from './header-background.svg';
 import Logo from '../../assets/logo.svg';
 import LogoName from '../../assets/logoname.svg';
