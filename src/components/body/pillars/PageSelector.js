@@ -12,10 +12,33 @@ class PageSelector extends Component {
     this.pairRef = this.buttonRef.bind(this, 'pair');
     this.learnRef = this.buttonRef.bind(this, 'learn');
     this.growRef = this.buttonRef.bind(this, 'grow');
+    this.onClick = this.onClick.bind(this);
+  }
+
+  getButtons() {
+    return [this.pair, this.learn, this.grow];
+  }
+
+  onClick(e) {
+    const buttons = this.getButtons();
+    const lefts = buttons.map(b => b.getBoundingClientRect().left);
+    const clickedButton = e.currentTarget;
+    let target;
+    if (clickedButton === buttons[0]) {
+      target = 'pair-button';
+      this.selectedButton.style.transform = `translateX(0px)`;
+    } else if (clickedButton === buttons[1]) {
+      target = 'learn-button';
+      this.selectedButton.style.transform = `translateX(${lefts[1] - lefts[0]}px)`;
+    } else {
+      target = 'grow-button';
+      this.selectedButton.style.transform = `translateX(${lefts[2] - lefts[0]}px)`;
+    }
+    this.props.pageShift(target);
   }
 
   handleResize() {
-    const buttons = [this.pair, this.learn, this.grow];
+    const buttons = this.getButtons();
     const lefts = buttons.map(b => b.getBoundingClientRect().left);
 
     if (this.props.activePillar === "learn-button") {
@@ -47,9 +70,9 @@ class PageSelector extends Component {
     return (
       <div ref={this.containerRef} className="div-center page-selector-container">
         <div ref={this.selectedButtonRef} className="page-button selected-button"></div>
-        <div ref={this.pairRef} className="page-button pair-button" onClick={this.props.pageShift}><h4>Pair</h4></div>
-        <div ref={this.learnRef} className="page-button learn-button" onClick={this.props.pageShift}><h4>Learn</h4></div>
-        <div ref={this.growRef} className="page-button grow-button" onClick={this.props.pageShift}><h4>Grow</h4></div>
+        <div ref={this.pairRef} className="page-button pair-button" onClick={this.onClick}><h4>Pair</h4></div>
+        <div ref={this.learnRef} className="page-button learn-button" onClick={this.onClick}><h4>Learn</h4></div>
+        <div ref={this.growRef} className="page-button grow-button" onClick={this.onClick}><h4>Grow</h4></div>
       </div>
     )
   }
