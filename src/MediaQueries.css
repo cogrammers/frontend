@@ -10,7 +10,7 @@
   @media screen
     and (max-width: 805px) {
 
-      #page-selector-container {
+      .page-selector-container {
         width: 80%;
       }
 
@@ -56,7 +56,7 @@
 
     /* Page Selector */
 
-    #page-selector-container {
+    .page-selector-container {
       width: 90%;
       margin-bottom: 1rem;
     }
@@ -98,7 +98,7 @@
       justify-content: flex-end;
     }
 
-    #footer-logo-tagline {
+    .footer-logo-tagline {
       bottom: unset;
       right: unset;
       position: relative;
