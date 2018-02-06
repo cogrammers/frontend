@@ -25,13 +25,13 @@ class PageSelector extends Component {
     const clickedButton = e.currentTarget;
     let target;
     if (clickedButton === buttons[0]) {
-      target = 'pair-button';
+      target = 'pair';
       this.selectedButton.style.transform = `translateX(0px)`;
     } else if (clickedButton === buttons[1]) {
-      target = 'learn-button';
+      target = 'learn';
       this.selectedButton.style.transform = `translateX(${lefts[1] - lefts[0]}px)`;
     } else {
-      target = 'grow-button';
+      target = 'grow';
       this.selectedButton.style.transform = `translateX(${lefts[2] - lefts[0]}px)`;
     }
     this.props.pageShift(target);

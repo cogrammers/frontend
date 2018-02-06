@@ -1,0 +1,39 @@
+
+.footer {
+  width: 100%;
+  height: 250px;
+}
+
+.footer .footer-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 250px;
+  width: 100%;
+  z-index: -10;
+}
+
+.footer .footer-logo-tagline {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 25%;
+  min-width: 250px;
+  -webkit-filter: drop-shadow(0 4px 6px rgba(50,50,93,.11));
+          filter: drop-shadow(0 4px 6px rgba(50,50,93,.11));
+}
+
+.footer .social-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  max-width: 500px;
+  min-width: 350px;
+  bottom: 25px;
+  left: 25px;
+}
+
+.footer .social-logo {
+  width: 60px;
+}

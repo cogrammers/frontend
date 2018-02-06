@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import InclusivePhoto from '../../../assets/photos/inclusive.jpg';
 
 class Pair extends Component {
-
-
   render() {
-
     return (
       <div className="pillar-container">
         <div className="pillar-content-container">
@@ -15,7 +12,7 @@ class Pair extends Component {
           </div>
 
           <div className="pillar-photo-container">
-             <img id="inclusive-photo" className="pillar-photo" alt="People walking across a street with a city in the background" src={InclusivePhoto}/>
+            <img id="inclusive-photo" className="pillar-photo" alt="People walking across a street with a city in the background" src={InclusivePhoto}/>
           </div>
         </div>
       </div>
