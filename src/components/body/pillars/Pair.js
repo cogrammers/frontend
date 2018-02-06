@@ -12,7 +12,7 @@ class Pair extends Component {
           </div>
 
           <div className="pillar-photo-container">
-            <img id="inclusive-photo" className="pillar-photo" alt="People walking across a street with a city in the background" src={InclusivePhoto}/>
+            <img className="pillar-photo" alt="People walking across a street with a city in the background" src={InclusivePhoto}/>
           </div>
         </div>
       </div>

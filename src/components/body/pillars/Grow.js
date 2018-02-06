@@ -13,7 +13,7 @@ class Grow extends Component {
           </div>
 
           <div className="pillar-photo-container">
-             <img id="grow-photo" className="pillar-photo" alt="Unknown person sitting next to Dr. Seuss book" src={GrowPhoto}/>
+             <img className="pillar-photo" alt="Unknown person sitting next to Dr. Seuss book" src={GrowPhoto}/>
           </div>
         </div>
       </div>
