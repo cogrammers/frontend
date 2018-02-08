@@ -1,7 +1,7 @@
 @media screen
   and (max-width: 1100px) {
 
-    .pillar-page {
+    body .pillar-page {
       height: 520px;
     }
 
@@ -10,19 +10,19 @@
   @media screen
     and (max-width: 805px) {
 
-      .page-selector-container {
+      body .page-selector-container {
         width: 80%;
       }
 
-      .pillar-content > h3 {
+      body .pillar-content > h3 {
         font-size: 1.6rem;
       }
 
-      .social-container {
+      body .social-container {
         width: 30%;
       }
 
-      .social-logo {
+      body .social-logo {
         width: 50px;
       }
 
@@ -31,60 +31,60 @@
 @media screen
   and (max-width: 650px) {
 
-    .container {
+    body .container {
       width: 100%;
     }
 
     /*  Header */
-    .header-div {
+    body .header-div {
       min-height: 300px;
     }
 
-    #header-logo-name {
+    body #header-logo-name {
       display: none;
     }
 
     /* About section */
 
-    #about {
+    body #about {
       width: 90%;
     }
 
-    .linebreak {
+    body .linebreak {
       width: 85%;
     }
 
     /* Page Selector */
 
-    .page-selector-container {
+    body .page-selector-container {
       width: 90%;
       margin-bottom: 1rem;
     }
 
-    .page-button {
+    body .page-button {
       width: 100px;
     }
 
 
     /* Pillar Section */
 
-    .pillar-page {
+    body .pillar-page {
       height: 710px;
     }
 
-    .pillar-content-container {
+    body .pillar-content-container {
       flex-direction: column;
     }
 
-    .pillar-content {
+    body .pillar-content {
       padding: 0 10px;
     }
 
-    .pillar-content > h3 {
+    body .pillar-content > h3 {
       text-align: center;
     }
 
-    .image-placeholder {
+    body .image-placeholder {
       width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -92,13 +92,13 @@
 
     /* Footer */
 
-    .footer {
+    body .footer {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
     }
 
-    .footer-logo-tagline {
+    body .footer .footer-logo-tagline {
       bottom: unset;
       right: unset;
       position: relative;
@@ -109,7 +109,7 @@
       order: 2;
     }
 
-    .social-container {
+    body .footer .social-container {
       bottom: unset;
       left: unset;
       position: relative;
@@ -118,8 +118,7 @@
       min-width: 90%;
     }
 
-    .social-logo {
+    body .footer .social-logo {
       width: 50px;
     }
-
   }
