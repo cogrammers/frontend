@@ -1,5 +1,84 @@
-html {
-  background: linear-gradient(135deg,#0F82F5, white, white) no-repeat center center fixed;
-  background-size: cover;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
   font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+
+/* custom grid styles */
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.div-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-70 {
+  width: 70%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.margin-right-15 {
+  margin-right: 15px;
+}
+
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+.remove-top-space {
+  -webkit-margin-before: 0em;
 }
