@@ -41,9 +41,9 @@ class PageSelector extends Component {
     const buttons = this.getButtons();
     const lefts = buttons.map(b => b.getBoundingClientRect().left);
 
-    if (this.props.activePillar === "learn-button") {
+    if (this.props.activePillar === "learn") {
       this.selectedButton.style.transform = `translateX(${lefts[1] - lefts[0]}px)`;
-    } else if (this.props.activePillar === "grow-button") {
+    } else if (this.props.activePillar === "grow") {
       this.selectedButton.style.transform = `translateX(${lefts[2] - lefts[0]}px)`;
     }
   }
@@ -70,9 +70,9 @@ class PageSelector extends Component {
     return (
       <div ref={this.containerRef} className="div-center page-selector-container">
         <div ref={this.selectedButtonRef} className="page-button selected-button"></div>
-        <div ref={this.pairRef} className="page-button pair-button" onClick={this.onClick}><h4>Pair</h4></div>
-        <div ref={this.learnRef} className="page-button learn-button" onClick={this.onClick}><h4>Learn</h4></div>
-        <div ref={this.growRef} className="page-button grow-button" onClick={this.onClick}><h4>Grow</h4></div>
+        <div ref={this.pairRef} className="page-button" onClick={this.onClick}><h4>Pair</h4></div>
+        <div ref={this.learnRef} className="page-button" onClick={this.onClick}><h4>Learn</h4></div>
+        <div ref={this.growRef} className="page-button" onClick={this.onClick}><h4>Grow</h4></div>
       </div>
     )
   }
