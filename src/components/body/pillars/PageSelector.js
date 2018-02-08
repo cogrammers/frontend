@@ -1,40 +1,81 @@
 import React, { Component } from 'react';
+import './PageSelector.css';
 
 
-class PageSelector extends Component{
+class PageSelector extends Component {
 
-  componentDidMount() {
-      this.handleResize();
-      window.addEventListener('resize',  this.handleResize.bind(this));
+  constructor() {
+    super();
+    this.handleResize = this.handleResize.bind(this);
+    this.containerRef = this.containerRef.bind(this);
+    this.selectedButtonRef = this.selectedButtonRef.bind(this);
+    this.pairRef = this.buttonRef.bind(this, 'pair');
+    this.learnRef = this.buttonRef.bind(this, 'learn');
+    this.growRef = this.buttonRef.bind(this, 'grow');
+    this.onClick = this.onClick.bind(this);
   }
-  // if issues come up with window resize, it may need to be unbinded when unmounting
+
+  getButtons() {
+    return [this.pair, this.learn, this.grow];
+  }
+
+  onClick(e) {
+    const buttons = this.getButtons();
+    const lefts = buttons.map(b => b.getBoundingClientRect().left);
+    const clickedButton = e.currentTarget;
+    let target;
+    if (clickedButton === buttons[0]) {
+      target = 'pair';
+      this.selectedButton.style.transform = `translateX(0px)`;
+    } else if (clickedButton === buttons[1]) {
+      target = 'learn';
+      this.selectedButton.style.transform = `translateX(${lefts[1] - lefts[0]}px)`;
+    } else {
+      target = 'grow';
+      this.selectedButton.style.transform = `translateX(${lefts[2] - lefts[0]}px)`;
+    }
+    this.props.pageShift(target);
+  }
 
   handleResize() {
-      let movingButton = document.getElementById('selected-button');
-      const allButtons = document.querySelectorAll('.page-button');
-      const buttonArray = [].slice.call(allButtons);
-      let button1Location = buttonArray[1].getBoundingClientRect().left;
-      let button2Location = buttonArray[2].getBoundingClientRect().left;
-      let button3Location = buttonArray[3].getBoundingClientRect().left;
+    const buttons = this.getButtons();
+    const lefts = buttons.map(b => b.getBoundingClientRect().left);
 
-      if (this.props.activePillar === "learn-button") {
-        movingButton.style.transform = `translateX(${button2Location - button1Location}px)`;
-      } else if (this.props.activePillar === "grow-button") {
-        movingButton.style.transform = `translateX(${button3Location - button1Location}px)`;
-      }
+    if (this.props.activePillar === "learn") {
+      this.selectedButton.style.transform = `translateX(${lefts[1] - lefts[0]}px)`;
+    } else if (this.props.activePillar === "grow") {
+      this.selectedButton.style.transform = `translateX(${lefts[2] - lefts[0]}px)`;
+    }
   }
 
-  render(){
-    return(
-      <div id="page-selector-container" className="div-center">
-        <div id="selected-button" className="page-button"></div>
-        <div className="page-button pair-button" onClick={this.props.pageShift}><h4>Pair</h4></div>
-        <div className="page-button learn-button" onClick={this.props.pageShift}><h4>Learn</h4></div>
-        <div className="page-button grow-button" onClick={this.props.pageShift}><h4>Grow</h4></div>
+  containerRef(ref) {
+    if (ref) {
+      window.addEventListener('resize',  this.handleResize);
+      this.handleResize();
+    }
+    else {
+      window.removeEventListener('resize',  this.handleResize);
+    }
+  }
+
+  selectedButtonRef(ref) {
+    this.selectedButton = ref;
+  }
+
+  buttonRef(name, ref) {
+    this[name] = ref;
+  }
+
+  render() {
+    return (
+      <div ref={this.containerRef} className="div-center page-selector-container">
+        <div ref={this.selectedButtonRef} className="page-button selected-button"></div>
+        <div ref={this.pairRef} className="page-button" onClick={this.onClick}><h4>Pair</h4></div>
+        <div ref={this.learnRef} className="page-button" onClick={this.onClick}><h4>Learn</h4></div>
+        <div ref={this.growRef} className="page-button" onClick={this.onClick}><h4>Grow</h4></div>
       </div>
     )
   }
-
 }
 
 export default PageSelector;

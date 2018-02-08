@@ -1,0 +1,34 @@
+.page-selector-container {
+  position: relative;
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 60px;
+}
+
+.page-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 120px;
+  border: none;
+  border-radius: 2px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.selected-button {
+  position: absolute;
+  z-index: -5;
+  transition: .25s;
+  transition-timing-function: cubic-bezier(0.39, 1.03, 0.68, 1.19);
+  background: linear-gradient(120deg, rgba(61,75,244, 0.7) , rgba(6,147,244, 0.7));
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),
+              0 1px 3px rgba(0,0,0,.08);
+}

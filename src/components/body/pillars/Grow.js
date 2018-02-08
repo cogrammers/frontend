@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import GrowPhoto from '../../../assets/photos/grow.jpg';
 
 class Grow extends Component {
-
-
   render() {
-
     return (
       <div className="pillar-container">
-
         <div className="pillar-content-container">
           <div className="pillar-content margin-right-15">
             <h3 className="text-left">Community Building</h3>
@@ -17,10 +13,9 @@ class Grow extends Component {
           </div>
 
           <div className="pillar-photo-container">
-             <img id="grow-photo" className="pillar-photo" alt="Unknown person sitting next to Dr. Seuss book" src={GrowPhoto}/>
+             <img className="pillar-photo" alt="Unknown person sitting next to Dr. Seuss book" src={GrowPhoto}/>
           </div>
         </div>
-
       </div>
     )
   }
