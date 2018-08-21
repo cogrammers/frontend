@@ -3,28 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ajv": "^5.0.1",
+    "ajv": "^6.5.3",
     "animejs": "^2.2.0",
-    "babel-eslint": "^8.0.1",
-    "eslint": "^4.1.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-loader": "^1.8.0",
-    "eslint-plugin-flowtype": "^2.39.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.1.0",
-    "file-loader": "^1.1.5",
-    "jest": "^22.0.6",
-    "jest-cli": "^22.0.6",
-    "npm-check-updates": "^2.14.0",
-    "postcss-loader": "^2.0.8",
-    "react": "^16.2.0",
-    "react-css-transition-replace": "^3.0.2",
-    "react-dom": "^16.0.0",
-    "react-grid-system": "^3.1.2",
-    "react-scripts": "1.0.17",
-    "react-transition-group": "^1.2.1",
-    "reset-css": "^2.2.1",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^1.1.11",
+    "jest": "^23.5.0",
+    "jest-cli": "^23.5.0",
+    "npm-check-updates": "^2.14.2",
+    "postcss-loader": "^3.0.0",
+    "react": "^16.4.2",
+    "react-css-transition-replace": "^3.0.3",
+    "react-dom": "^16.4.2",
+    "react-grid-system": "^4.2.0",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.4.0",
+    "reset-css": "^4.0.1",
     "svg-react-loader": "^0.4.5"
   },
   "scripts": {
@@ -34,7 +34,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^2.0.1",
-    "webpack": "^3.8.1"
+    "eslint-config-react-app": "^2.1.0"
   }
 }
